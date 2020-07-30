@@ -1,0 +1,309 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>nest.experiment.experiment module &mdash; NeST 0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> NeST
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">API</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">NeST</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>nest.experiment.experiment module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/modules/nest.experiment.experiment.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-nest.experiment.experiment">
+<span id="nest-experiment-experiment-module"></span><h1>nest.experiment.experiment module<a class="headerlink" href="#module-nest.experiment.experiment" title="Permalink to this headline">¶</a></h1>
+<p>User API to setup and run experiments on a given topology</p>
+<dl class="py class">
+<dt id="nest.experiment.experiment.Experiment">
+<em class="property">class </em><code class="sig-prename descclassname">nest.experiment.experiment.</code><code class="sig-name descname">Experiment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.experiment.experiment.Experiment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Handles experiment to be run on topology</p>
+<dl class="py method">
+<dt id="nest.experiment.experiment.Experiment.add_flow">
+<code class="sig-name descname">add_flow</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">flow</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.experiment.experiment.Experiment.add_flow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add flow to experiment
+By default, the flow is assumed to be
+TCP with cubic congestion algorithm</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>flow</strong> (<a class="reference internal" href="#nest.experiment.experiment.Flow" title="nest.experiment.experiment.Flow"><em>Flow</em></a>) – Add flow to experiment</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nest.experiment.experiment.Experiment.add_tcp_flow">
+<code class="sig-name descname">add_tcp_flow</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">flow</span></em>, <em class="sig-param"><span class="n">congestion_algorithm</span><span class="o">=</span><span class="default_value">'cubic'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.experiment.experiment.Experiment.add_tcp_flow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add TCP flow to experiment</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>flow</strong> (<a class="reference internal" href="#nest.experiment.experiment.Flow" title="nest.experiment.experiment.Flow"><em>Flow</em></a>) – Flow to be added to experiment</p></li>
+<li><p><strong>congestion_algorithm</strong> (<em>str</em>) – TCP congestion algorithm (Default value = ‘cubic’)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nest.experiment.experiment.Experiment.add_udp_flow">
+<code class="sig-name descname">add_udp_flow</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">flow</span></em>, <em class="sig-param"><span class="n">target_bw</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.experiment.experiment.Experiment.add_udp_flow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add UDP flow to experiment</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>flow</strong> (<a class="reference internal" href="#nest.experiment.experiment.Flow" title="nest.experiment.experiment.Flow"><em>Flow</em></a>) – Flow to be added to experiment</p></li>
+<li><p><strong>target_bw</strong> – (Default value = 1)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="nest.experiment.experiment.Experiment.node_stats">
+<code class="sig-name descname">node_stats</code><em class="property"> = ['cwnd', 'rtt']</em><a class="headerlink" href="#nest.experiment.experiment.Experiment.node_stats" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="nest.experiment.experiment.Experiment.qdisc_stats">
+<code class="sig-name descname">qdisc_stats</code><em class="property"> = ['qlen', 'latency']</em><a class="headerlink" href="#nest.experiment.experiment.Experiment.qdisc_stats" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nest.experiment.experiment.Experiment.require_node_stats">
+<code class="sig-name descname">require_node_stats</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">node</span></em>, <em class="sig-param"><span class="n">stats</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.experiment.experiment.Experiment.require_node_stats" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stats to be obtained from node in the experiment</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>node</strong> (<a class="reference internal" href="nest.topology.node.html#nest.topology.node.Node" title="nest.topology.node.Node"><em>Node</em></a>) – Node from which stats are to be obtained</p></li>
+<li><p><strong>stats</strong> (<em>list</em><em>(</em><em>str</em><em>)</em>) – Stats required (Default value = ‘’)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nest.experiment.experiment.Experiment.require_qdisc_stats">
+<code class="sig-name descname">require_qdisc_stats</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">interface</span></em>, <em class="sig-param"><span class="n">stats</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.experiment.experiment.Experiment.require_qdisc_stats" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stats to be obtained from qdisc in interface</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>interface</strong> (<a class="reference internal" href="nest.topology.interface.html#nest.topology.interface.Interface" title="nest.topology.interface.Interface"><em>Interface</em></a>) – Interface containing the qdisc</p></li>
+<li><p><strong>stats</strong> (<em>list</em><em>(</em><em>str</em><em>)</em>) – Stats required (Default value = ‘’)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nest.experiment.experiment.Experiment.run">
+<code class="sig-name descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nest.experiment.experiment.Experiment.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run the experiment</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="nest.experiment.experiment.Flow">
+<em class="property">class </em><code class="sig-prename descclassname">nest.experiment.experiment.</code><code class="sig-name descname">Flow</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">source_node</span></em>, <em class="sig-param"><span class="n">destination_node</span></em>, <em class="sig-param"><span class="n">destination_address</span></em>, <em class="sig-param"><span class="n">start_time</span></em>, <em class="sig-param"><span class="n">stop_time</span></em>, <em class="sig-param"><span class="n">number_of_flows</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.experiment.experiment.Flow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Defines a flow in the topology</p>
+<dl class="py method">
+<dt id="nest.experiment.experiment.Flow.destination_address">
+<em class="property">property </em><code class="sig-name descname">destination_address</code><a class="headerlink" href="#nest.experiment.experiment.Flow.destination_address" title="Permalink to this definition">¶</a></dt>
+<dd><p>Getter for destination address</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, NITK
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

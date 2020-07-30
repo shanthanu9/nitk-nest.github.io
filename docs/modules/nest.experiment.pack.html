@@ -1,0 +1,286 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>nest.experiment.pack module &mdash; NeST 0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> NeST
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">API</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">NeST</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>nest.experiment.pack module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/modules/nest.experiment.pack.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-nest.experiment.pack">
+<span id="nest-experiment-pack-module"></span><h1>nest.experiment.pack module<a class="headerlink" href="#module-nest.experiment.pack" title="Permalink to this headline">¶</a></h1>
+<p>Package all results into a folder</p>
+<dl class="py class">
+<dt id="nest.experiment.pack.Pack">
+<em class="property">class </em><code class="sig-prename descclassname">nest.experiment.pack.</code><code class="sig-name descname">Pack</code><a class="headerlink" href="#nest.experiment.pack.Pack" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Handles packaging results</p>
+<dl class="py attribute">
+<dt id="nest.experiment.pack.Pack.FOLDER">
+<code class="sig-name descname">FOLDER</code><em class="property"> = ''</em><a class="headerlink" href="#nest.experiment.pack.Pack.FOLDER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nest.experiment.pack.Pack.compress">
+<em class="property">static </em><code class="sig-name descname">compress</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nest.experiment.pack.Pack.compress" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compress Pack.FOLDER into a tar archive</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nest.experiment.pack.Pack.create_subfolder">
+<em class="property">static </em><code class="sig-name descname">create_subfolder</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">subfolder</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.experiment.pack.Pack.create_subfolder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create subfolder if it already doesn’t exist</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>subfolder</strong> (<em>str</em>) – Subfolder name</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nest.experiment.pack.Pack.dump_file">
+<em class="property">static </em><code class="sig-name descname">dump_file</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filename</span></em>, <em class="sig-param"><span class="n">content</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.experiment.pack.Pack.dump_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dump a file into Pack.FOLDER</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> (<em>str</em>) – Name of file</p></li>
+<li><p><strong>content</strong> (<em>str</em>) – Content to be stored in file</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nest.experiment.pack.Pack.dump_plot">
+<em class="property">static </em><code class="sig-name descname">dump_plot</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">subfolder</span></em>, <em class="sig-param"><span class="n">filename</span></em>, <em class="sig-param"><span class="n">fig</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.experiment.pack.Pack.dump_plot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dump a plot into Pack.FOLDER</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>subfolder</strong> (<em>str</em>) – Subfolder to which plot belongs to</p></li>
+<li><p><strong>filename</strong> (<em>str</em>) – Name of plot</p></li>
+<li><p><strong>fig</strong> (<em>matplotlib.pyplot.fig</em>) – Plot figure to be stored in file</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nest.experiment.pack.Pack.init">
+<em class="property">static </em><code class="sig-name descname">init</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">exp_name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.experiment.pack.Pack.init" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a folder with format ‘testname(time)_dump’</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>exp_name</strong> (<em>str</em>) – Name of experiment</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nest.experiment.pack.Pack.set_owner">
+<em class="property">static </em><code class="sig-name descname">set_owner</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">path</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.experiment.pack.Pack.set_owner" title="Permalink to this definition">¶</a></dt>
+<dd><p>Change file permission to that of the
+actual user running (For eg. user running
+sudo)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>path</strong> (<em>str</em>) – Path of file</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, NITK
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

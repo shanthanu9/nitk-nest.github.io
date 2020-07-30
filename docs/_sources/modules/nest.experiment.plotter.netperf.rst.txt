@@ -1,0 +1,7 @@
+nest.experiment.plotter.netperf module
+======================================
+
+.. automodule:: nest.experiment.plotter.netperf
+   :members:
+   :undoc-members:
+   :show-inheritance:

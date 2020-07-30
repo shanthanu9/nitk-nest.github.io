@@ -1,0 +1,32 @@
+nest package
+============
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   nest.engine
+   nest.experiment
+   nest.tests
+   nest.topology
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   nest.config
+   nest.topology_map
+   nest.user
+   nest.version
+
+Module contents
+---------------
+
+.. automodule:: nest
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,434 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>nest.experiment.parser.tc module &mdash; NeST 0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> NeST
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">API</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">NeST</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>nest.experiment.parser.tc module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/modules/nest.experiment.parser.tc.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-nest.experiment.parser.tc">
+<span id="nest-experiment-parser-tc-module"></span><h1>nest.experiment.parser.tc module<a class="headerlink" href="#module-nest.experiment.parser.tc" title="Permalink to this headline">¶</a></h1>
+<p>Runs tc command and parses qdisc stats
+from it’s output</p>
+<dl class="py class">
+<dt id="nest.experiment.parser.tc.TcRunner">
+<em class="property">class </em><code class="sig-prename descclassname">nest.experiment.parser.tc.</code><code class="sig-name descname">TcRunner</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ns_id</span></em>, <em class="sig-param"><span class="n">dev</span></em>, <em class="sig-param"><span class="n">run_time</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.experiment.parser.tc.TcRunner" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="nest.experiment.parser.runnerbase.html#nest.experiment.parser.runnerbase.Runner" title="nest.experiment.parser.runnerbase.Runner"><code class="xref py py-class docutils literal notranslate"><span class="pre">nest.experiment.parser.runnerbase.Runner</span></code></a></p>
+<p>Runs tc command and stores and parses the output</p>
+<dl class="py attribute">
+<dt id="nest.experiment.parser.tc.TcRunner.iterator">
+<code class="sig-name descname">iterator</code><a class="headerlink" href="#nest.experiment.parser.tc.TcRunner.iterator" title="Permalink to this definition">¶</a></dt>
+<dd><p>absolute path of the tc iterator script</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="nest.experiment.parser.tc.TcRunner.old_kernel_version">
+<code class="sig-name descname">old_kernel_version</code><a class="headerlink" href="#nest.experiment.parser.tc.TcRunner.old_kernel_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>minimum kernel version required</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="nest.experiment.parser.tc.TcRunner.new_kernel_version">
+<code class="sig-name descname">new_kernel_version</code><a class="headerlink" href="#nest.experiment.parser.tc.TcRunner.new_kernel_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>kernel version from which tc has concrete json support</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="nest.experiment.parser.tc.TcRunner.ns_id">
+<code class="sig-name descname">ns_id</code><a class="headerlink" href="#nest.experiment.parser.tc.TcRunner.ns_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>network namespace to run tc from</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="nest.experiment.parser.tc.TcRunner.dev">
+<code class="sig-name descname">dev</code><a class="headerlink" href="#nest.experiment.parser.tc.TcRunner.dev" title="Permalink to this definition">¶</a></dt>
+<dd><p>dev id to collect tc stats from</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="nest.experiment.parser.tc.TcRunner.run_time">
+<code class="sig-name descname">run_time</code><a class="headerlink" href="#nest.experiment.parser.tc.TcRunner.run_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>total time to run tc for</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>num</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nest.experiment.parser.tc.TcRunner.clean_json">
+<code class="sig-name descname">clean_json</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stats</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.experiment.parser.tc.TcRunner.clean_json" title="Permalink to this definition">¶</a></dt>
+<dd><p>Json formatted tc stats with invalid json keys
+and values are removed or fixed</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>stats</strong> (<em>str</em>) – unclean json formatted stats</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>fixed json stats</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nest.experiment.parser.tc.TcRunner.clean_up">
+<code class="sig-name descname">clean_up</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nest.experiment.parser.tc.TcRunner.clean_up" title="Permalink to this definition">¶</a></dt>
+<dd><p>Closes the temp files created</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nest.experiment.parser.tc.TcRunner.get_qdisc_re">
+<code class="sig-name descname">get_qdisc_re</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nest.experiment.parser.tc.TcRunner.get_qdisc_re" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compile regular expression for parsing qdisc specific paramters</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>qdisc keyed regular expression</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nest.experiment.parser.tc.TcRunner.get_qdisc_specific_params">
+<code class="sig-name descname">get_qdisc_specific_params</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nest.experiment.parser.tc.TcRunner.get_qdisc_specific_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parameters to be obtained for a specific qdisc</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>qdisc keyed list of paramters to parsed</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="id0">
+<code class="sig-name descname">iterator</code><em class="property"> = '/home/shanthanu9/stuff/nest/nest/experiment/parser/iterators/tc.sh'</em><a class="headerlink" href="#id0" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="nest.experiment.parser.tc.TcRunner.new_tc_version">
+<code class="sig-name descname">new_tc_version</code><em class="property"> = time.struct_time(tm_year=2019, tm_mon=3, tm_mday=19, tm_hour=0, tm_min=0, tm_sec=0, tm_wday=1, tm_yday=78, tm_isdst=-1)</em><a class="headerlink" href="#nest.experiment.parser.tc.TcRunner.new_tc_version" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nest.experiment.parser.tc.TcRunner.new_tc_version_parse_helper">
+<code class="sig-name descname">new_tc_version_parse_helper</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">raw_stats</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.experiment.parser.tc.TcRunner.new_tc_version_parse_helper" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parsing tc command on linux kernel version
+5.5 and above</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>raw_stats</strong> (<em>list</em><em>(</em><em>str</em><em>)</em>) – list of stats collected at each iteration</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>handle keyed dict with list of stats</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="nest.experiment.parser.tc.TcRunner.old_tc_version">
+<code class="sig-name descname">old_tc_version</code><em class="property"> = time.struct_time(tm_year=2018, tm_mon=1, tm_mday=29, tm_hour=0, tm_min=0, tm_sec=0, tm_wday=0, tm_yday=29, tm_isdst=-1)</em><a class="headerlink" href="#nest.experiment.parser.tc.TcRunner.old_tc_version" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nest.experiment.parser.tc.TcRunner.old_tc_version_parse_helper">
+<code class="sig-name descname">old_tc_version_parse_helper</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">raw_stats</span></em>, <em class="sig-param"><span class="n">qdisc_param</span></em>, <em class="sig-param"><span class="n">qdisc_re</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.experiment.parser.tc.TcRunner.old_tc_version_parse_helper" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parsing tc command on linux kernel versions
+4.15.0 to 5.4</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>raw_stats</strong> (<em>list</em><em>(</em><em>str</em><em>)</em>) – list of stats collected at each iteration</p></li>
+<li><p><strong>qdisc_param</strong> (<em>dict</em>) – parameters to be obtained for a specific qdisc</p></li>
+<li><p><strong>qdisc_re</strong> (<em>dict</em>) – regular expression for parsing qdisc specific paramters</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>handle keyed dict with list of stats</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nest.experiment.parser.tc.TcRunner.parse">
+<code class="sig-name descname">parse</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nest.experiment.parser.tc.TcRunner.parse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parses the required data from tc-qdisc output</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nest.experiment.parser.tc.TcRunner.parsed_tc_version">
+<code class="sig-name descname">parsed_tc_version</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nest.experiment.parser.tc.TcRunner.parsed_tc_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>parses the current tc version</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>current tc version as date</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>struct_time</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nest.experiment.parser.tc.TcRunner.print_error">
+<code class="sig-name descname">print_error</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nest.experiment.parser.tc.TcRunner.print_error" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to print error from <cite>self.err</cite></p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nest.experiment.parser.tc.TcRunner.repl">
+<code class="sig-name descname">repl</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">match</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.experiment.parser.tc.TcRunner.repl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called by re.sub() for every match</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>match</strong> (<em>Match</em>) – Match object captured by the pattern</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>string to replace the matched string</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nest.experiment.parser.tc.TcRunner.run">
+<code class="sig-name descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nest.experiment.parser.tc.TcRunner.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Runs the tc iterator</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, NITK
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

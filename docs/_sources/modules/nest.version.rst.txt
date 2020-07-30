@@ -1,0 +1,7 @@
+nest.version module
+===================
+
+.. automodule:: nest.version
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,463 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>nest.topology.interface module &mdash; NeST 0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> NeST
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">API</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">NeST</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>nest.topology.interface module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/modules/nest.topology.interface.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-nest.topology.interface">
+<span id="nest-topology-interface-module"></span><h1>nest.topology.interface module<a class="headerlink" href="#module-nest.topology.interface" title="Permalink to this headline">¶</a></h1>
+<p>API related to interfaces in topology</p>
+<dl class="py class">
+<dt id="nest.topology.interface.Interface">
+<em class="property">class </em><code class="sig-prename descclassname">nest.topology.interface.</code><code class="sig-name descname">Interface</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">interface_name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.interface.Interface" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Abstraction for an network interface.</p>
+<dl class="py attribute">
+<dt id="nest.topology.interface.Interface.name">
+<code class="sig-name descname">name</code><a class="headerlink" href="#nest.topology.interface.Interface.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>User given name for the interface</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="nest.topology.interface.Interface.id">
+<code class="sig-name descname">id</code><a class="headerlink" href="#nest.topology.interface.Interface.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>This value is used by <cite>engine</cite> to create emulated interface
+entity</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="nest.topology.interface.Interface.node">
+<code class="sig-name descname">node</code><a class="headerlink" href="#nest.topology.interface.Interface.node" title="Permalink to this definition">¶</a></dt>
+<dd><p><cite>Node</cite> which contains this <cite>Interface</cite></p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="nest.topology.node.html#nest.topology.node.Node" title="nest.topology.node.Node">Node</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="nest.topology.interface.Interface.address">
+<code class="sig-name descname">address</code><a class="headerlink" href="#nest.topology.interface.Interface.address" title="Permalink to this definition">¶</a></dt>
+<dd><p>IP address assigned to this interface</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str/Address</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nest.topology.interface.Interface.add_class">
+<code class="sig-name descname">add_class</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">qdisc</span></em>, <em class="sig-param"><span class="n">parent</span><span class="o">=</span><span class="default_value">'root'</span></em>, <em class="sig-param"><span class="n">classid</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.interface.Interface.add_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create an object that represents a class</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>qdisc</strong> (<em>string</em>) – The qdisc which needs to be added to the interface</p></li>
+<li><p><strong>parent</strong> (<em>string</em>) – id of the parent class in major:minor form(optional) (Default value = ‘root’)</p></li>
+<li><p><strong>classid</strong> (<em>string</em>) – id of the class (Default value = ‘’)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nest.topology.interface.Interface.add_filter">
+<code class="sig-name descname">add_filter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">priority</span></em>, <em class="sig-param"><span class="n">filtertype</span></em>, <em class="sig-param"><span class="n">flowid</span></em>, <em class="sig-param"><span class="n">protocol</span><span class="o">=</span><span class="default_value">'ip'</span></em>, <em class="sig-param"><span class="n">parent</span><span class="o">=</span><span class="default_value">'root'</span></em>, <em class="sig-param"><span class="n">handle</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.interface.Interface.add_filter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Design a Filter to assign to a Class or Qdisc</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>protocol</strong> (<em>string</em>) – protocol used (Default value = ‘ip’)</p></li>
+<li><p><strong>priority</strong> (<em>int</em>) – priority of the filter</p></li>
+<li><p><strong>filtertype</strong> (<em>string</em>) – one of the available filters</p></li>
+<li><p><strong>flowid</strong> (<a class="reference internal" href="nest.topology.traffic_control.html#nest.topology.traffic_control.Class" title="nest.topology.traffic_control.Class"><em>Class</em></a>) – classid of the class where the traffic is enqueued
+if the traffic passes the filter</p></li>
+<li><p><strong>parent</strong> (<em>string</em>) – id of the parent class in major:minor form(optional) (Default value = ‘root’)</p></li>
+<li><p><strong>handle</strong> (<em>string</em>) – id of the filter (Default value = ‘’)</p></li>
+<li><p><strong>filter</strong> (<em>dictionary</em>) – filter parameters</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nest.topology.interface.Interface.add_qdisc">
+<code class="sig-name descname">add_qdisc</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">qdisc</span></em>, <em class="sig-param"><span class="n">parent</span><span class="o">=</span><span class="default_value">'root'</span></em>, <em class="sig-param"><span class="n">handle</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.interface.Interface.add_qdisc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a qdisc (Queueing Discipline) to this interface</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>qdisc</strong> (<em>string</em>) – The qdisc which needs to be added to the interface</p></li>
+<li><p><strong>dev</strong> (<em>Interface class</em>) – The interface to which the qdisc is to be added</p></li>
+<li><p><strong>parent</strong> (<em>string</em>) – id of the parent class in major:minor form(optional) (Default value = ‘root’)</p></li>
+<li><p><strong>handle</strong> (<em>string</em>) – id of the filter (Default value = ‘’)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="id0">
+<em class="property">property </em><code class="sig-name descname">address</code><a class="headerlink" href="#id0" title="Permalink to this definition">¶</a></dt>
+<dd><p>Getter for the address associated
+with the interface</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nest.topology.interface.Interface.delete_qdisc">
+<code class="sig-name descname">delete_qdisc</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">handle</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.interface.Interface.delete_qdisc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete qdisc (Queueing Discipline) from this interface</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>handle</strong> (<em>string</em>) – Handle of the qdisc to be deleted</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nest.topology.interface.Interface.get_address">
+<code class="sig-name descname">get_address</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.interface.Interface.get_address" title="Permalink to this definition">¶</a></dt>
+<dd><p>Getter for the address associated
+with the interface</p>
+<p><em>NOTE</em>: Maintained since mentioned in NeST paper.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nest.topology.interface.Interface.get_qdisc">
+<code class="sig-name descname">get_qdisc</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.interface.Interface.get_qdisc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Note that this is the qdisc set inside
+the IFB.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="id1">
+<em class="property">property </em><code class="sig-name descname">id</code><a class="headerlink" href="#id1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Getter for id</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="id2">
+<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#id2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Getter for name</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="id3">
+<em class="property">property </em><code class="sig-name descname">node</code><a class="headerlink" href="#id3" title="Permalink to this definition">¶</a></dt>
+<dd><p>Getter for the <cite>Node</cite> associated
+with the interface</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nest.topology.interface.Interface.pair">
+<em class="property">property </em><code class="sig-name descname">pair</code><a class="headerlink" href="#nest.topology.interface.Interface.pair" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get other pair for this interface (assuming veth)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nest.topology.interface.Interface.set_address">
+<code class="sig-name descname">set_address</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">address</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.interface.Interface.set_address" title="Permalink to this definition">¶</a></dt>
+<dd><p>Assigns ip adress to an interface</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>address</strong> (<a class="reference internal" href="nest.topology.address.html#nest.topology.address.Address" title="nest.topology.address.Address"><em>Address</em></a><em> or </em><em>str</em>) – ip address to be assigned to the interface</p></li>
+<li><p><strong>*NOTE*</strong> (<em>Maintained since mentioned in NeST paper.</em>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nest.topology.interface.Interface.set_attributes">
+<code class="sig-name descname">set_attributes</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">bandwidth</span></em>, <em class="sig-param"><span class="n">delay</span></em>, <em class="sig-param"><span class="n">qdisc</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.interface.Interface.set_attributes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add attributes bandwidth, delay and qdisc to interface</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bandwidth</strong> – Packet outgoing rate</p></li>
+<li><p><strong>delay</strong> (<em>string</em>) – Delay before packet is sent out</p></li>
+<li><p><strong>qdisc</strong> (<em>string</em>) – The Queueing algorithm to be added to interface
+(Default value = None)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nest.topology.interface.Interface.set_bandwidth">
+<code class="sig-name descname">set_bandwidth</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">min_rate</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.interface.Interface.set_bandwidth" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets a minimum bandwidth for the interface
+It is done by adding a htb qdisc and a rate parameter to the class</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>min_rate</strong> (<em>string</em>) – The minimum rate that has to be set in kbit</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nest.topology.interface.Interface.set_delay">
+<code class="sig-name descname">set_delay</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">delay</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.interface.Interface.set_delay" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a delay to the link between two namespaces
+It is done by adding a delay in the interface</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>delay</strong> (<em>str</em>) – The delay to be added</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nest.topology.interface.Interface.set_mode">
+<code class="sig-name descname">set_mode</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mode</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.interface.Interface.set_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Changes the mode of the interface</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>mode</strong> (<em>string</em>) – interface mode to be set</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nest.topology.interface.Interface.set_qdisc">
+<code class="sig-name descname">set_qdisc</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">qdisc</span></em>, <em class="sig-param"><span class="n">bandwidth</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.interface.Interface.set_qdisc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds the Queueing algorithm to the interface</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>qdisc</strong> (<em>string</em>) – The Queueing algorithm to be added</p></li>
+<li><p><strong>bandwidth</strong> – Link bandwidth</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nest.topology.interface.Interface.subnet">
+<em class="property">property </em><code class="sig-name descname">subnet</code><a class="headerlink" href="#nest.topology.interface.Interface.subnet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Getter for the subnet to which the address belongs to</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="nest.topology.interface.Veth">
+<em class="property">class </em><code class="sig-prename descclassname">nest.topology.interface.</code><code class="sig-name descname">Veth</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">interface1_name</span></em>, <em class="sig-param"><span class="n">interface2_name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.interface.Veth" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Handle creation of Veth pairs</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="nest.topology.interface.connect">
+<code class="sig-prename descclassname">nest.topology.interface.</code><code class="sig-name descname">connect</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ns1</span></em>, <em class="sig-param"><span class="n">ns2</span></em>, <em class="sig-param"><span class="n">interface1_name</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">interface2_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.interface.connect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Connects two nodes <cite>ns1</cite> and <cite>ns2</cite></p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, NITK
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

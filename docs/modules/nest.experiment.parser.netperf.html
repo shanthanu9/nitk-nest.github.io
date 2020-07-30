@@ -1,0 +1,344 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>nest.experiment.parser.netperf module &mdash; NeST 0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> NeST
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">API</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">NeST</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>nest.experiment.parser.netperf module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/modules/nest.experiment.parser.netperf.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-nest.experiment.parser.netperf">
+<span id="nest-experiment-parser-netperf-module"></span><h1>nest.experiment.parser.netperf module<a class="headerlink" href="#module-nest.experiment.parser.netperf" title="Permalink to this headline">¶</a></h1>
+<p>Runs netperf commands to setup tcp flow
+and collect throughput data</p>
+<dl class="py class">
+<dt id="nest.experiment.parser.netperf.NetperfRunner">
+<em class="property">class </em><code class="sig-prename descclassname">nest.experiment.parser.netperf.</code><code class="sig-name descname">NetperfRunner</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ns_id</span></em>, <em class="sig-param"><span class="n">destination_ip</span></em>, <em class="sig-param"><span class="n">start_time</span></em>, <em class="sig-param"><span class="n">run_time</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.experiment.parser.netperf.NetperfRunner" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="nest.experiment.parser.runnerbase.html#nest.experiment.parser.runnerbase.Runner" title="nest.experiment.parser.runnerbase.Runner"><code class="xref py py-class docutils literal notranslate"><span class="pre">nest.experiment.parser.runnerbase.Runner</span></code></a></p>
+<p>Runs netperf command and parses statistics from it’s output</p>
+<dl class="py attribute">
+<dt id="nest.experiment.parser.netperf.NetperfRunner.default_netperf_options">
+<code class="sig-name descname">default_netperf_options</code><a class="headerlink" href="#nest.experiment.parser.netperf.NetperfRunner.default_netperf_options" title="Permalink to this definition">¶</a></dt>
+<dd><p>default options to run netperf command with</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="nest.experiment.parser.netperf.NetperfRunner.netperf_tcp_options">
+<code class="sig-name descname">netperf_tcp_options</code><a class="headerlink" href="#nest.experiment.parser.netperf.NetperfRunner.netperf_tcp_options" title="Permalink to this definition">¶</a></dt>
+<dd><p>tcp related netperf options</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="nest.experiment.parser.netperf.NetperfRunner.netperf_udp_options">
+<code class="sig-name descname">netperf_udp_options</code><a class="headerlink" href="#nest.experiment.parser.netperf.NetperfRunner.netperf_udp_options" title="Permalink to this definition">¶</a></dt>
+<dd><p>udp related netperf options</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="nest.experiment.parser.netperf.NetperfRunner.ns_id">
+<code class="sig-name descname">ns_id</code><a class="headerlink" href="#nest.experiment.parser.netperf.NetperfRunner.ns_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>network namespace to run netperf from</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="nest.experiment.parser.netperf.NetperfRunner.destination_ip">
+<code class="sig-name descname">destination_ip</code><a class="headerlink" href="#nest.experiment.parser.netperf.NetperfRunner.destination_ip" title="Permalink to this definition">¶</a></dt>
+<dd><p>ip address of the destination namespace</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="nest.experiment.parser.netperf.NetperfRunner.start_time">
+<code class="sig-name descname">start_time</code><a class="headerlink" href="#nest.experiment.parser.netperf.NetperfRunner.start_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>time at which netperf is to run</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>num</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="nest.experiment.parser.netperf.NetperfRunner.run_time">
+<code class="sig-name descname">run_time</code><a class="headerlink" href="#nest.experiment.parser.netperf.NetperfRunner.run_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>total time to run netperf for</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>num</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nest.experiment.parser.netperf.NetperfRunner.clean_up">
+<code class="sig-name descname">clean_up</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nest.experiment.parser.netperf.NetperfRunner.clean_up" title="Permalink to this definition">¶</a></dt>
+<dd><p>Closes the temp files created</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="id0">
+<code class="sig-name descname">default_netperf_options</code><em class="property"> = {'banner': '-P 0', 'debug': '-d', 'fill_file': '-F /dev/urandom', 'intervel': '-D -0.2', 'ipv4': '-4', 'testlen': '-l 10', 'testname': '-t TCP_STREAM'}</em><a class="headerlink" href="#id0" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="id1">
+<code class="sig-name descname">netperf_tcp_options</code><em class="property"> = {'cong_algo': '-K cubic', 'stats': '-k THROUGHPUT'}</em><a class="headerlink" href="#id1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="id2">
+<code class="sig-name descname">netperf_udp_options</code><em class="property"> = {'routing': '-R 1', 'stats': '-k THROUGHPUT'}</em><a class="headerlink" href="#id2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nest.experiment.parser.netperf.NetperfRunner.parse">
+<code class="sig-name descname">parse</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nest.experiment.parser.netperf.NetperfRunner.parse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse netperf output from <cite>self.out</cite></p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nest.experiment.parser.netperf.NetperfRunner.print_error">
+<code class="sig-name descname">print_error</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nest.experiment.parser.netperf.NetperfRunner.print_error" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to print error from <cite>self.err</cite></p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nest.experiment.parser.netperf.NetperfRunner.run">
+<code class="sig-name descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nest.experiment.parser.netperf.NetperfRunner.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Runs netperf at t=`self.start_time`</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nest.experiment.parser.netperf.NetperfRunner.run_netserver">
+<em class="property">static </em><code class="sig-name descname">run_netserver</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ns_id</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.experiment.parser.netperf.NetperfRunner.run_netserver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run netserver in <cite>ns_id</cite></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>ns_id</strong> (<em>str</em>) – namespace to run netserver on</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="nest.experiment.parser.netperf.NetperfRunner.tcp_output_options">
+<code class="sig-name descname">tcp_output_options</code><em class="property"> = ['THROUGHPUT', 'LOCAL_CONG_CONTROL', 'REMOTE_CONG_CONTROL', 'TRANSPORT_MSS', 'LOCAL_SOCKET_TOS', 'REMOTE_SOCKET_TOS']</em><a class="headerlink" href="#nest.experiment.parser.netperf.NetperfRunner.tcp_output_options" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, NITK
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
