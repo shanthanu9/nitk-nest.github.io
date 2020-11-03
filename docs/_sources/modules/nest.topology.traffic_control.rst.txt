@@ -1,7 +1,0 @@
-nest.topology.traffic\_control module
-=====================================
-
-.. automodule:: nest.topology.traffic_control
-   :members:
-   :undoc-members:
-   :show-inheritance:

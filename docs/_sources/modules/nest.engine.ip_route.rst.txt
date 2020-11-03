@@ -1,7 +1,0 @@
-nest.engine.ip\_route module
-============================
-
-.. automodule:: nest.engine.ip_route
-   :members:
-   :undoc-members:
-   :show-inheritance:

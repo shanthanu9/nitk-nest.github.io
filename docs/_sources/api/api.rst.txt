@@ -1,12 +1,17 @@
 .. SPDX-License-Identifier: GPL-2.0-only
    Copyright (c) 2019-2020 NITK Surathkal
 
-API
-===
+Class Reference
+===============
 
+User APIs for `NeST`
+
+NeST APIs
+---------
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 2
 
-   nest.topology.node
-   nest.topology.interface
-   nest.experiment.experiment
+   config
+   experiment
+   routing
+   topology

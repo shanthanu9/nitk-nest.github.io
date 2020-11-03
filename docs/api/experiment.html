@@ -1,0 +1,511 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Experiment &mdash; NeST 0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Routing" href="routing.html" />
+    <link rel="prev" title="Config" href="config.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> NeST
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/tutorial.html">Tutorial</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="api.html">Class Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="api.html#nest-apis">NeST APIs</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="config.html">Config</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Experiment</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#module-nest.experiment.experiment">Flow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-nest.experiment.run_exp">run_exp</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="routing.html">Routing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="topology.html">Topology</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">NeST</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="api.html">Class Reference</a> &raquo;</li>
+        
+      <li>Experiment</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/experiment.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="experiment">
+<h1>Experiment<a class="headerlink" href="#experiment" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-nest.experiment.experiment">
+<span id="flow"></span><h2>Flow<a class="headerlink" href="#module-nest.experiment.experiment" title="Permalink to this headline">¶</a></h2>
+<p>User API to setup and run experiments on a given topology</p>
+<dl class="py class">
+<dt id="nest.experiment.experiment.Experiment">
+<em class="property">class </em><code class="sig-prename descclassname">nest.experiment.experiment.</code><code class="sig-name descname">Experiment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.experiment.experiment.Experiment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Handles experiment to be run on topology</p>
+<dl class="py method">
+<dt id="nest.experiment.experiment.Experiment.add_flow">
+<code class="sig-name descname">add_flow</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">flow</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.experiment.experiment.Experiment.add_flow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add flow to experiment
+By default, the flow is assumed to be
+TCP with cubic congestion algorithm</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>flow</strong> (<a class="reference internal" href="#nest.experiment.experiment.Flow" title="nest.experiment.experiment.Flow"><em>Flow</em></a>) – Add flow to experiment</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nest.experiment.experiment.Experiment.add_tcp_flow">
+<code class="sig-name descname">add_tcp_flow</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">flow</span></em>, <em class="sig-param"><span class="n">congestion_algorithm</span><span class="o">=</span><span class="default_value">'cubic'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.experiment.experiment.Experiment.add_tcp_flow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add TCP flow to experiment</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>flow</strong> (<a class="reference internal" href="#nest.experiment.experiment.Flow" title="nest.experiment.experiment.Flow"><em>Flow</em></a>) – Flow to be added to experiment</p></li>
+<li><p><strong>congestion_algorithm</strong> (<em>str</em>) – TCP congestion algorithm (Default value = ‘cubic’)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nest.experiment.experiment.Experiment.add_udp_flow">
+<code class="sig-name descname">add_udp_flow</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">flow</span></em>, <em class="sig-param"><span class="n">target_bandwidth</span><span class="o">=</span><span class="default_value">'1mbit'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.experiment.experiment.Experiment.add_udp_flow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add UDP flow to experiment</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>flow</strong> (<a class="reference internal" href="#nest.experiment.experiment.Flow" title="nest.experiment.experiment.Flow"><em>Flow</em></a>) – Flow to be added to experiment</p></li>
+<li><p><strong>target_bw</strong> – UPD bandwidth (in Mbits) (Default value = ‘1mbit’)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nest.experiment.experiment.Experiment.require_qdisc_stats">
+<code class="sig-name descname">require_qdisc_stats</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">interface</span></em>, <em class="sig-param"><span class="n">stats</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.experiment.experiment.Experiment.require_qdisc_stats" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stats to be obtained from qdisc in interface</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>interface</strong> (<a class="reference internal" href="topology.html#nest.topology.interface.Interface" title="nest.topology.interface.Interface"><em>Interface</em></a>) – Interface containing the qdisc</p></li>
+<li><p><strong>stats</strong> (<em>list</em><em>(</em><em>str</em><em>)</em>) – Stats required (Default value = ‘’) [NOT SUPPORTED]</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nest.experiment.experiment.Experiment.run">
+<code class="sig-name descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nest.experiment.experiment.Experiment.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run the experiment</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="nest.experiment.experiment.Flow">
+<em class="property">class </em><code class="sig-prename descclassname">nest.experiment.experiment.</code><code class="sig-name descname">Flow</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">source_node</span></em>, <em class="sig-param"><span class="n">destination_node</span></em>, <em class="sig-param"><span class="n">destination_address</span></em>, <em class="sig-param"><span class="n">start_time</span></em>, <em class="sig-param"><span class="n">stop_time</span></em>, <em class="sig-param"><span class="n">number_of_flows</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.experiment.experiment.Flow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Defines a flow in the topology</p>
+<dl class="py method">
+<dt id="nest.experiment.experiment.Flow.destination_address">
+<em class="property">property </em><code class="sig-name descname">destination_address</code><a class="headerlink" href="#nest.experiment.experiment.Flow.destination_address" title="Permalink to this definition">¶</a></dt>
+<dd><p>Getter for destination address</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-nest.experiment.run_exp">
+<span id="run-exp"></span><h2>run_exp<a class="headerlink" href="#module-nest.experiment.run_exp" title="Permalink to this headline">¶</a></h2>
+<p>Script to be run for running experiments on topology</p>
+<dl class="py function">
+<dt id="nest.experiment.run_exp.cleanup">
+<code class="sig-prename descclassname">nest.experiment.run_exp.</code><code class="sig-name descname">cleanup</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nest.experiment.run_exp.cleanup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clean up</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="nest.experiment.run_exp.dump_json_ouputs">
+<code class="sig-prename descclassname">nest.experiment.run_exp.</code><code class="sig-name descname">dump_json_ouputs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nest.experiment.run_exp.dump_json_ouputs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Outputs experiment results as json dumps</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="nest.experiment.run_exp.get_dependency_status">
+<code class="sig-prename descclassname">nest.experiment.run_exp.</code><code class="sig-name descname">get_dependency_status</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">tools</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.experiment.run_exp.get_dependency_status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks for dependency</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>tools</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – list of tools to check for it’s installation</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>contains information as to whether <cite>tools</cite> are installed</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="nest.experiment.run_exp.get_parser_workers">
+<code class="sig-prename descclassname">nest.experiment.run_exp.</code><code class="sig-name descname">get_parser_workers</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">runners_list</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.experiment.run_exp.get_parser_workers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Setup parsing processes</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>runners_list</strong> (<em>collections.NamedTuple</em>) – all(netperf, ping, ss, tc..) the runners</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>parsers</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>List[multiprocessing.Process]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="nest.experiment.run_exp.get_plotter_workers">
+<code class="sig-prename descclassname">nest.experiment.run_exp.</code><code class="sig-name descname">get_plotter_workers</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nest.experiment.run_exp.get_plotter_workers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Setup plotting processes</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>plotters</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>List[multiprocessing.Process]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="nest.experiment.run_exp.run_experiment">
+<code class="sig-prename descclassname">nest.experiment.run_exp.</code><code class="sig-name descname">run_experiment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">exp</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.experiment.run_exp.run_experiment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run experiment</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>exp</strong> (<a class="reference internal" href="#nest.experiment.experiment.Experiment" title="nest.experiment.experiment.Experiment"><em>Experiment</em></a>) – The experiment attributes</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="nest.experiment.run_exp.run_workers">
+<code class="sig-prename descclassname">nest.experiment.run_exp.</code><code class="sig-name descname">run_workers</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">workers</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.experiment.run_exp.run_workers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run and wait for processes to finish</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>workers</strong> (<em>list</em><em>[</em><em>multiprocessing.Process</em><em>]</em>) – List of processes to be run</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="nest.experiment.run_exp.setup_ping_runners">
+<code class="sig-prename descclassname">nest.experiment.run_exp.</code><code class="sig-name descname">setup_ping_runners</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dependency</span></em>, <em class="sig-param"><span class="n">ping_schedules</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.experiment.run_exp.setup_ping_runners" title="Permalink to this definition">¶</a></dt>
+<dd><p>setup PingRunners for collecting latency</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dependency</strong> (<em>int</em>) – whether ping is installed</p></li>
+<li><p><strong>ping_schedules</strong> (<em>dict</em>) – start time and end time for PingRunners</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>workers</strong> (<em>List[multiprocessing.Process]</em>) – Processes to run ss at nodes</p></li>
+<li><p><strong>runners</strong> (<em>List[SsRunners]</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="nest.experiment.run_exp.setup_ss_runners">
+<code class="sig-prename descclassname">nest.experiment.run_exp.</code><code class="sig-name descname">setup_ss_runners</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dependency</span></em>, <em class="sig-param"><span class="n">ss_schedules</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.experiment.run_exp.setup_ss_runners" title="Permalink to this definition">¶</a></dt>
+<dd><p>setup SsRunners for collecting tcp socket statistics</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dependency</strong> (<em>int</em>) – whether ss is installed</p></li>
+<li><p><strong>ss_schedules</strong> (<em>dict</em>) – start time and end time for SsRunners</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>workers</strong> (<em>List[multiprocessing.Process]</em>) – Processes to run ss at nodes</p></li>
+<li><p><strong>runners</strong> (<em>List[SsRunners]</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="nest.experiment.run_exp.setup_tc_runners">
+<code class="sig-prename descclassname">nest.experiment.run_exp.</code><code class="sig-name descname">setup_tc_runners</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dependency</span></em>, <em class="sig-param"><span class="n">qdisc_stats</span></em>, <em class="sig-param"><span class="n">exp_end</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.experiment.run_exp.setup_tc_runners" title="Permalink to this definition">¶</a></dt>
+<dd><p>setup TcRunners for collecting qdisc statistics</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dependency</strong> (<em>int</em>) – whether tc is installed</p></li>
+<li><p><strong>qdisc_stats</strong> (<em>dict</em>) – info regarding nodes to run tc on</p></li>
+<li><p><strong>exp_end</strong> (<em>float</em>) – time to stop running tc</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>workers</strong> (<em>List[multiprocessing.Process]</em>) – Processes to run tc at nodes</p></li>
+<li><p><strong>runners</strong> (<em>List[TcRunners]</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="nest.experiment.run_exp.setup_tcp_flows">
+<code class="sig-prename descclassname">nest.experiment.run_exp.</code><code class="sig-name descname">setup_tcp_flows</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dependency</span></em>, <em class="sig-param"><span class="n">flow</span></em>, <em class="sig-param"><span class="n">ss_schedules</span></em>, <em class="sig-param"><span class="n">destination_nodes</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.experiment.run_exp.setup_tcp_flows" title="Permalink to this definition">¶</a></dt>
+<dd><p>Setup netperf to run tcp flows
+:param dependency: whether netperf is installed
+:type dependency: int
+:param flow: Flow parameters
+:type flow: Flow
+:param ss_schedules: ss_schedules so far
+:param destination_nodes: Destination nodes so far already running netperf server</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><ul class="simple">
+<li><p><strong>dependency</strong> (<em>int</em>) – updated dependency incase netperf is not installed</p></li>
+<li><p><strong>netperf_runners</strong> (<em>List[NetperfRunner]</em>) – all the netperf flows generated</p></li>
+<li><p><strong>workers</strong> (<em>List[multiprocessing.Process]</em>) – Processes to run netperf flows</p></li>
+<li><p><strong>ss_schedules</strong> (<em>dict</em>) – updated ss_schedules</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="nest.experiment.run_exp.setup_udp_flows">
+<code class="sig-prename descclassname">nest.experiment.run_exp.</code><code class="sig-name descname">setup_udp_flows</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dependency</span></em>, <em class="sig-param"><span class="n">flow</span></em>, <em class="sig-param"><span class="n">ss_schedules</span></em>, <em class="sig-param"><span class="n">destination_nodes</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.experiment.run_exp.setup_udp_flows" title="Permalink to this definition">¶</a></dt>
+<dd><p>Setup iperf3 to run udp flows</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dependency</strong> (<em>int</em>) – whether iperf3 is installed</p></li>
+<li><p><strong>flow</strong> (<a class="reference internal" href="#nest.experiment.experiment.Flow" title="nest.experiment.experiment.Flow"><em>Flow</em></a>) – Flow parameters</p></li>
+<li><p><strong>ss_schedules</strong> – ss_schedules so far</p></li>
+<li><p><strong>destination_nodes</strong> – Destination nodes so far already running iperf3 server</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>depedency</strong> (<em>int</em>) – updated dependency incase iproute2 is not installed</p></li>
+<li><p><strong>iperf3_runners</strong> (<em>List[NetperfRunner]</em>) – all the iperf3 udp flows generated</p></li>
+<li><p><strong>workers</strong> (<em>List[multiprocessing.Process]</em>) – Processes to run iperf3 udp flows</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="routing.html" class="btn btn-neutral float-right" title="Routing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="config.html" class="btn btn-neutral float-left" title="Config" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, NITK
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

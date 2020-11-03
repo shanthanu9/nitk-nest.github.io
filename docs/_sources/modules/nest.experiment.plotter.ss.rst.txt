@@ -1,7 +1,0 @@
-nest.experiment.plotter.ss module
-=================================
-
-.. automodule:: nest.experiment.plotter.ss
-   :members:
-   :undoc-members:
-   :show-inheritance:

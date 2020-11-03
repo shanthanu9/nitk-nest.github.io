@@ -1,7 +1,0 @@
-nest.experiment.parser.ss module
-================================
-
-.. automodule:: nest.experiment.parser.ss
-   :members:
-   :undoc-members:
-   :show-inheritance:

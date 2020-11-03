@@ -1,7 +1,0 @@
-nest.experiment.parser.ping module
-==================================
-
-.. automodule:: nest.experiment.parser.ping
-   :members:
-   :undoc-members:
-   :show-inheritance:

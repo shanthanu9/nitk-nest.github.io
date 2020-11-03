@@ -1,7 +1,0 @@
-nest.topology.interface module
-==============================
-
-.. automodule:: nest.topology.interface
-   :members:
-   :undoc-members:
-   :show-inheritance:

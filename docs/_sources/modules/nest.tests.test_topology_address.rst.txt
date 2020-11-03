@@ -1,7 +1,0 @@
-nest.tests.test\_topology\_address module
-=========================================
-
-.. automodule:: nest.tests.test_topology_address
-   :members:
-   :undoc-members:
-   :show-inheritance:

@@ -1,0 +1,562 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Routing &mdash; NeST 0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Topology" href="topology.html" />
+    <link rel="prev" title="Experiment" href="experiment.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> NeST
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/tutorial.html">Tutorial</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="api.html">Class Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="api.html#nest-apis">NeST APIs</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="config.html">Config</a></li>
+<li class="toctree-l3"><a class="reference internal" href="experiment.html">Experiment</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Routing</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#module-nest.routing.quagga_base">QuaggaBase</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-nest.routing.zebra">Zebra</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-nest.routing.ospf">Ospf</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-nest.routing.rip">Rip</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-nest.routing.routing_helper">RoutingHelper</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="topology.html">Topology</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">NeST</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="api.html">Class Reference</a> &raquo;</li>
+        
+      <li>Routing</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/routing.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="routing">
+<h1>Routing<a class="headerlink" href="#routing" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-nest.routing.quagga_base">
+<span id="quaggabase"></span><h2>QuaggaBase<a class="headerlink" href="#module-nest.routing.quagga_base" title="Permalink to this headline">¶</a></h2>
+<p>Base class for Quagga.</p>
+<dl class="py class">
+<dt id="nest.routing.quagga_base.QuaggaBase">
+<em class="property">class </em><code class="sig-prename descclassname">nest.routing.quagga_base.</code><code class="sig-name descname">QuaggaBase</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">router_ns_id</span></em>, <em class="sig-param"><span class="n">interfaces</span></em>, <em class="sig-param"><span class="n">daemon</span></em>, <em class="sig-param"><span class="n">conf_dir</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.routing.quagga_base.QuaggaBase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></p>
+<p>Abstract class for Quagga related processes.
+This class should be inherited for adding other quagga daemons.</p>
+<p>Use <cite>add_to_config</cite> to sequentially add daemon related commands
+for the config files.</p>
+<p>Call <cite>create_config_command</cite> to actually create the file on disk</p>
+<p>Finally call <cite>run</cite> to run the daemon. Uses the above created config file.</p>
+<p>Note:
+(ii): If you’re using <cite>RoutingHelper</cite>, config files are created at the /tmp</p>
+<blockquote>
+<div><p>directory.</p>
+</div></blockquote>
+<p>(ii): Daemons may not work as expected if a config file is not created
+.. attribute:: conf</p>
+<blockquote>
+<div><p>In memory stream to temporarily hold configuration</p>
+<dl class="field-list simple">
+<dt class="field-odd">type</dt>
+<dd class="field-odd"><p>file-like</p>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="py attribute">
+<dt id="nest.routing.quagga_base.QuaggaBase.router_ns_id">
+<code class="sig-name descname">router_ns_id</code><a class="headerlink" href="#nest.routing.quagga_base.QuaggaBase.router_ns_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Router namespace id</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="nest.routing.quagga_base.QuaggaBase.daemon">
+<code class="sig-name descname">daemon</code><a class="headerlink" href="#nest.routing.quagga_base.QuaggaBase.daemon" title="Permalink to this definition">¶</a></dt>
+<dd><p>quagga daemon to run(one of [‘zebra’, ‘ospf’])</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="nest.routing.quagga_base.QuaggaBase.conf_file">
+<code class="sig-name descname">conf_file</code><a class="headerlink" href="#nest.routing.quagga_base.QuaggaBase.conf_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>config file path</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="nest.routing.quagga_base.QuaggaBase.pid_file">
+<code class="sig-name descname">pid_file</code><a class="headerlink" href="#nest.routing.quagga_base.QuaggaBase.pid_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>pid file path for the daemon process</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="nest.routing.quagga_base.QuaggaBase.interfaces">
+<code class="sig-name descname">interfaces</code><a class="headerlink" href="#nest.routing.quagga_base.QuaggaBase.interfaces" title="Permalink to this definition">¶</a></dt>
+<dd><p>interfaces present in the router</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>List[<a class="reference internal" href="topology.html#nest.topology.interface.Interface" title="nest.topology.interface.Interface">Interface</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nest.routing.quagga_base.QuaggaBase.add_to_config">
+<code class="sig-name descname">add_to_config</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.routing.quagga_base.QuaggaBase.add_to_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a line to <cite>self.conf</cite></p>
+<dl class="simple">
+<dt>command<span class="classifier">str</span></dt><dd><p>command to add to config file</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nest.routing.quagga_base.QuaggaBase.create_basic_config">
+<em class="property">abstract </em><code class="sig-name descname">create_basic_config</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nest.routing.quagga_base.QuaggaBase.create_basic_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Created minimum configuration for <cite>daemon</cite></p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nest.routing.quagga_base.QuaggaBase.create_config">
+<code class="sig-name descname">create_config</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nest.routing.quagga_base.QuaggaBase.create_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates config file on disk from <cite>self.conf</cite></p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nest.routing.quagga_base.QuaggaBase.run">
+<em class="property">abstract </em><code class="sig-name descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nest.routing.quagga_base.QuaggaBase.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run the <cite>daemon</cite> along with its config file</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-nest.routing.zebra">
+<span id="zebra"></span><h2>Zebra<a class="headerlink" href="#module-nest.routing.zebra" title="Permalink to this headline">¶</a></h2>
+<p>Class to handle zebra</p>
+<dl class="py class">
+<dt id="nest.routing.zebra.Zebra">
+<em class="property">class </em><code class="sig-prename descclassname">nest.routing.zebra.</code><code class="sig-name descname">Zebra</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">router_ns_id</span></em>, <em class="sig-param"><span class="n">interfaces</span></em>, <em class="sig-param"><span class="n">conf_dir</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.routing.zebra.Zebra" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nest.routing.quagga_base.QuaggaBase" title="nest.routing.quagga_base.QuaggaBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">nest.routing.quagga_base.QuaggaBase</span></code></a></p>
+<p>Handles zebra related functionalities for quagga.
+Refer to <cite>QuaggaBase</cite> for usage</p>
+<dl class="py method">
+<dt id="nest.routing.zebra.Zebra.add_interface">
+<code class="sig-name descname">add_interface</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">interface</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.routing.zebra.Zebra.add_interface" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add interface command to config file</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nest.routing.zebra.Zebra.add_ip_address">
+<code class="sig-name descname">add_ip_address</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ip_address</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.routing.zebra.Zebra.add_ip_address" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add ip address command to config file</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nest.routing.zebra.Zebra.create_basic_config">
+<code class="sig-name descname">create_basic_config</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nest.routing.zebra.Zebra.create_basic_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a file with basic configuration for ospf.
+Use base <cite>add_to_config</cite> directly for more complex configurations</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nest.routing.zebra.Zebra.run">
+<code class="sig-name descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nest.routing.zebra.Zebra.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Runs the zebra daemon</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-nest.routing.ospf">
+<span id="ospf"></span><h2>Ospf<a class="headerlink" href="#module-nest.routing.ospf" title="Permalink to this headline">¶</a></h2>
+<p>Class to handles Ospf related functionalities</p>
+<dl class="py class">
+<dt id="nest.routing.ospf.Ospf">
+<em class="property">class </em><code class="sig-prename descclassname">nest.routing.ospf.</code><code class="sig-name descname">Ospf</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">router_ns_id</span></em>, <em class="sig-param"><span class="n">interfaces</span></em>, <em class="sig-param"><span class="n">conf_dir</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.routing.ospf.Ospf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nest.routing.quagga_base.QuaggaBase" title="nest.routing.quagga_base.QuaggaBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">nest.routing.quagga_base.QuaggaBase</span></code></a></p>
+<p>Handles Ospf related functionalities for quagga.</p>
+<dl class="py method">
+<dt id="nest.routing.ospf.Ospf.create_basic_config">
+<code class="sig-name descname">create_basic_config</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nest.routing.ospf.Ospf.create_basic_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a file with basic configuration for ospf.
+Use base <cite>add_to_config</cite> directly for more complex configurations</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nest.routing.ospf.Ospf.run">
+<code class="sig-name descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nest.routing.ospf.Ospf.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Runs the ospfd command</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-nest.routing.rip">
+<span id="rip"></span><h2>Rip<a class="headerlink" href="#module-nest.routing.rip" title="Permalink to this headline">¶</a></h2>
+<p>Class to handles RIP related functionalities</p>
+<dl class="py class">
+<dt id="nest.routing.rip.Rip">
+<em class="property">class </em><code class="sig-prename descclassname">nest.routing.rip.</code><code class="sig-name descname">Rip</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">router_ns_id</span></em>, <em class="sig-param"><span class="n">interfaces</span></em>, <em class="sig-param"><span class="n">conf_dir</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.routing.rip.Rip" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nest.routing.quagga_base.QuaggaBase" title="nest.routing.quagga_base.QuaggaBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">nest.routing.quagga_base.QuaggaBase</span></code></a></p>
+<p>Handles RIP related functionalities for quagga.
+Refer to <cite>QuaggaBase</cite> for usage</p>
+<dl class="py method">
+<dt id="nest.routing.rip.Rip.add_network">
+<code class="sig-name descname">add_network</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">network</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.routing.rip.Rip.add_network" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add command for subnet or interface to run rip on to config file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>network</strong> (<em>str</em>) – subnet or interface to run rip on</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nest.routing.rip.Rip.add_rip">
+<code class="sig-name descname">add_rip</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nest.routing.rip.Rip.add_rip" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add command to enable rip on router to config file</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nest.routing.rip.Rip.add_version">
+<code class="sig-name descname">add_version</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">version</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.routing.rip.Rip.add_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add version command to config file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>version</strong> (<em>str</em>) – rip version. Recommended is v2</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nest.routing.rip.Rip.create_basic_config">
+<code class="sig-name descname">create_basic_config</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nest.routing.rip.Rip.create_basic_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a file with basic configuration for rip.
+Use base <cite>add_to_config</cite> directly for more complex configurations</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nest.routing.rip.Rip.run">
+<code class="sig-name descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nest.routing.rip.Rip.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Runs the ripd command</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-nest.routing.routing_helper">
+<span id="routinghelper"></span><h2>RoutingHelper<a class="headerlink" href="#module-nest.routing.routing_helper" title="Permalink to this headline">¶</a></h2>
+<p>Helper class for routing</p>
+<dl class="py class">
+<dt id="nest.routing.routing_helper.RoutingHelper">
+<em class="property">class </em><code class="sig-prename descclassname">nest.routing.routing_helper.</code><code class="sig-name descname">RoutingHelper</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">protocol</span><span class="o">=</span><span class="default_value">'static'</span></em>, <em class="sig-param"><span class="n">hosts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">routers</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.routing.routing_helper.RoutingHelper" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Handles basic routing requirements for the topology.
+Either inherit this class or use <cite>Zebra</cite> and other protocols
+for better customizations</p>
+<dl class="py attribute">
+<dt id="nest.routing.routing_helper.RoutingHelper._module_map">
+<code class="sig-name descname">_module_map</code><a class="headerlink" href="#nest.routing.routing_helper.RoutingHelper._module_map" title="Permalink to this definition">¶</a></dt>
+<dd><p>map between protocol string and its module and class</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="nest.routing.routing_helper.RoutingHelper.protocol">
+<code class="sig-name descname">protocol</code><a class="headerlink" href="#nest.routing.routing_helper.RoutingHelper.protocol" title="Permalink to this definition">¶</a></dt>
+<dd><p>routing protocol(one of[‘ospf’])</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="nest.routing.routing_helper.RoutingHelper.routers">
+<code class="sig-name descname">routers</code><a class="headerlink" href="#nest.routing.routing_helper.RoutingHelper.routers" title="Permalink to this definition">¶</a></dt>
+<dd><p>routers in the topology</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>List[<a class="reference internal" href="topology.html#nest.topology.node.Node" title="nest.topology.node.Node">Node</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="nest.routing.routing_helper.RoutingHelper.hosts">
+<code class="sig-name descname">hosts</code><a class="headerlink" href="#nest.routing.routing_helper.RoutingHelper.hosts" title="Permalink to this definition">¶</a></dt>
+<dd><p>hosts in the topology</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>List[<a class="reference internal" href="topology.html#nest.topology.node.Node" title="nest.topology.node.Node">Node</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="nest.routing.routing_helper.RoutingHelper.conf_dir">
+<code class="sig-name descname">conf_dir</code><a class="headerlink" href="#nest.routing.routing_helper.RoutingHelper.conf_dir" title="Permalink to this definition">¶</a></dt>
+<dd><p>path for quagga config directory</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="nest.routing.routing_helper.RoutingHelper.protocol_class">
+<code class="sig-name descname">protocol_class</code><a class="headerlink" href="#nest.routing.routing_helper.RoutingHelper.protocol_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>Protocol class which will later be instantiated</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>ABCMeta</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nest.routing.routing_helper.RoutingHelper.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">protocol</span><span class="o">=</span><span class="default_value">'static'</span></em>, <em class="sig-param"><span class="n">hosts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">routers</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.routing.routing_helper.RoutingHelper.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructor for RoutingHelper</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>protocol</strong> (<em>str</em>) – routing protocol to be run. one of [ospf, rip]</p></li>
+<li><p><strong>hosts</strong> (<em>List</em><em>[</em><a class="reference internal" href="topology.html#nest.topology.node.Node" title="nest.topology.node.Node"><em>Node</em></a><em>]</em>) – List of hosts in the network. If <cite>None</cite>, considers the entire topology.
+Use this if your topology has disjoint networks</p></li>
+<li><p><strong>routers</strong> (<em>List</em><em>[</em><a class="reference internal" href="topology.html#nest.topology.node.Node" title="nest.topology.node.Node"><em>Node</em></a><em>]</em>) – List of routers in the network. If <cite>None</cite>, considers the entire topology.
+Use this if your topology has disjoint networks</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nest.routing.routing_helper.RoutingHelper.populate_routing_tables">
+<code class="sig-name descname">populate_routing_tables</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nest.routing.routing_helper.RoutingHelper.populate_routing_tables" title="Permalink to this definition">¶</a></dt>
+<dd><p>Populate routing table using <cite>self.protocol</cite></p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="topology.html" class="btn btn-neutral float-right" title="Topology" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="experiment.html" class="btn btn-neutral float-left" title="Experiment" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, NITK
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

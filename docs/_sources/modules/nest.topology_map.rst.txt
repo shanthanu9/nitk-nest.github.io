@@ -1,7 +1,0 @@
-nest.topology\_map module
-=========================
-
-.. automodule:: nest.topology_map
-   :members:
-   :undoc-members:
-   :show-inheritance:

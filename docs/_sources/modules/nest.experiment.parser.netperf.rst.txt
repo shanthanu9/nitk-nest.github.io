@@ -1,7 +1,0 @@
-nest.experiment.parser.netperf module
-=====================================
-
-.. automodule:: nest.experiment.parser.netperf
-   :members:
-   :undoc-members:
-   :show-inheritance:

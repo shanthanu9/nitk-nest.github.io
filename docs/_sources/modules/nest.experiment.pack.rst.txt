@@ -1,7 +1,0 @@
-nest.experiment.pack module
-===========================
-
-.. automodule:: nest.experiment.pack
-   :members:
-   :undoc-members:
-   :show-inheritance:

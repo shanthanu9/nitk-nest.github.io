@@ -1,7 +1,0 @@
-nest.experiment.plotter.common module
-=====================================
-
-.. automodule:: nest.experiment.plotter.common
-   :members:
-   :undoc-members:
-   :show-inheritance:

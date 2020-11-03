@@ -1,7 +1,0 @@
-nest.engine.uname module
-========================
-
-.. automodule:: nest.engine.uname
-   :members:
-   :undoc-members:
-   :show-inheritance:

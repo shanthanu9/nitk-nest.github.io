@@ -1,7 +1,0 @@
-nest.engine.tc module
-=====================
-
-.. automodule:: nest.engine.tc
-   :members:
-   :undoc-members:
-   :show-inheritance:

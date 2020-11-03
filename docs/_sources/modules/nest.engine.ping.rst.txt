@@ -1,7 +1,0 @@
-nest.engine.ping module
-=======================
-
-.. automodule:: nest.engine.ping
-   :members:
-   :undoc-members:
-   :show-inheritance:

@@ -1,7 +1,0 @@
-nest.experiment.parser.tc module
-================================
-
-.. automodule:: nest.experiment.parser.tc
-   :members:
-   :undoc-members:
-   :show-inheritance:

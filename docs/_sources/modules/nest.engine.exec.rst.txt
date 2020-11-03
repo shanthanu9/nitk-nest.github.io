@@ -1,7 +1,0 @@
-nest.engine.exec module
-=======================
-
-.. automodule:: nest.engine.exec
-   :members:
-   :undoc-members:
-   :show-inheritance:

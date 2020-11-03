@@ -1,7 +1,0 @@
-nest.config module
-==================
-
-.. automodule:: nest.config
-   :members:
-   :undoc-members:
-   :show-inheritance:

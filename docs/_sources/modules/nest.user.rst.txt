@@ -1,7 +1,0 @@
-nest.user module
-================
-
-.. automodule:: nest.user
-   :members:
-   :undoc-members:
-   :show-inheritance:
