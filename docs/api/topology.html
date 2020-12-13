@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Topology &mdash; NeST 0.1 documentation</title>
+  <title>Topology &mdash; NeST 0.2 documentation</title>
   
 
   
@@ -401,11 +401,11 @@ with the interface</p>
 <dl class="py method">
 <dt id="nest.topology.interface.Interface.set_address">
 <code class="sig-name descname">set_address</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">address</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.interface.Interface.set_address" title="Permalink to this definition">¶</a></dt>
-<dd><p>Assigns ip adress to an interface</p>
+<dd><p>Assigns IP address to an interface</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>address</strong> (<a class="reference internal" href="#nest.topology.address.Address" title="nest.topology.address.Address"><em>Address</em></a><em> or </em><em>str</em>) – ip address to be assigned to the interface</p></li>
+<li><p><strong>address</strong> (<a class="reference internal" href="#nest.topology.address.Address" title="nest.topology.address.Address"><em>Address</em></a><em> or </em><em>str</em>) – IP address to be assigned to the interface</p></li>
 <li><p><strong>*NOTE*</strong> (<em>Maintained since mentioned in NeST paper.</em>) – </p></li>
 </ul>
 </dd>
@@ -432,7 +432,7 @@ with the interface</p>
 <dt id="nest.topology.interface.Interface.set_bandwidth">
 <code class="sig-name descname">set_bandwidth</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">min_rate</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.interface.Interface.set_bandwidth" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets a minimum bandwidth for the interface
-It is done by adding a htb qdisc and a rate parameter to the class</p>
+It is done by adding a HTB qdisc and a rate parameter to the class</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>min_rate</strong> (<em>string</em>) – The minimum rate that has to be set in kbit</p>
@@ -525,7 +525,7 @@ It is done by adding a delay in the interface</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>dest_addr</strong> (<em>Address/str</em>) – Destination ip address of node to route to. ‘DEFAULT’ is
+<li><p><strong>dest_addr</strong> (<em>Address/str</em>) – Destination IP address of node to route to. ‘DEFAULT’ is
 for all addresses</p></li>
 <li><p><strong>via_interface</strong> (<a class="reference internal" href="#nest.topology.interface.Interface" title="nest.topology.interface.Interface"><em>Interface</em></a>) – <cite>Interface</cite> in <cite>Node</cite> to route via</p></li>
 <li><p><strong>next_hop_addr</strong> (<em>Address/str</em><em>, </em><em>optional</em>) – IP address of next hop Node (or router), by default ‘’</p></li>
@@ -539,7 +539,7 @@ for all addresses</p></li>
 <code class="sig-name descname">configure_tcp_param</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">param</span></em>, <em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.node.Node.configure_tcp_param" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configure TCP parameters of <cite>Node</cite> available at
 /proc/sys/net/ipv4/tcp_*.</p>
-<p>Eg. ‘window_scaling’, ‘wmem’, ‘ecn’, etc.</p>
+<p>Example: ‘window_scaling’, ‘wmem’, ‘ecn’, etc.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -562,7 +562,7 @@ for this <cite>param</cite>.</p>
 <code class="sig-name descname">configure_udp_param</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">param</span></em>, <em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.node.Node.configure_udp_param" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configure UDP parameters of <cite>Node</cite> available at
 /proc/sys/net/ipv4/udp_*.</p>
-<p>Eg. ‘early_demux’, ‘l3mdev_accept’, ‘rmem_min’, ‘wmem_min’</p>
+<p>Example: ‘early_demux’, ‘l3mdev_accept’, ‘rmem_min’, ‘wmem_min’</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -633,7 +633,7 @@ if there is a route.</p>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><cite>True</cite> if <cite>Node</cite> can succesfully ping <cite>destination_address</cite>.
+<dd class="field-even"><p><cite>True</cite> if <cite>Node</cite> can successfully ping <cite>destination_address</cite>.
 Else <cite>False</cite>.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
@@ -647,7 +647,7 @@ Else <cite>False</cite>.</p>
 <code class="sig-name descname">read_tcp_param</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">param</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.node.Node.read_tcp_param" title="Permalink to this definition">¶</a></dt>
 <dd><p>Read TCP parameters of <cite>Node</cite> available at
 <cite>/proc/sys/net/ipv4/tcp_*</cite>.</p>
-<p>Eg. ‘window_scaling’, ‘wmem’, ‘ecn’, etc.</p>
+<p>Example: ‘window_scaling’, ‘wmem’, ‘ecn’, etc.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>param</strong> (<em>str</em>) – TCP parameter to be read</p>
@@ -657,7 +657,7 @@ Else <cite>False</cite>.</p>
 <li><p><em>str</em> – If TCP Parameter <cite>param</cite> is valid, then corresponding value
 is returned.</p></li>
 <li><p><em>read tcp_parameters available at /proc/sys/net/ipv4/tcp_*</em></p></li>
-<li><p><em>Eg. window_scaling, wmem, ecn, etc.</em></p></li>
+<li><p><strong>Example</strong> (<em>window_scaling, wmem, ecn, etc.</em>)</p></li>
 </ul>
 </p>
 </dd>
@@ -669,7 +669,7 @@ is returned.</p></li>
 <code class="sig-name descname">read_udp_param</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">param</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.node.Node.read_udp_param" title="Permalink to this definition">¶</a></dt>
 <dd><p>Read UDP parameters of <cite>Node`available at
 `/proc/sys/net/ipv4/udp_*</cite>.</p>
-<p>Eg. ‘early_demux’, ‘l3mdev_accept’, ‘rmem_min’, ‘wmem_min’</p>
+<p>Example: ‘early_demux’, ‘l3mdev_accept’, ‘rmem_min’, ‘wmem_min’</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>param</strong> (<em>str</em>) – UDP parameter to be read</p>

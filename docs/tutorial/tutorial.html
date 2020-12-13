@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Tutorial &mdash; NeST 0.1 documentation</title>
+  <title>Tutorial &mdash; NeST 0.2 documentation</title>
   
 
   
@@ -175,17 +175,19 @@
 <span class="c1">##############################</span>
 
 <span class="c1"># Creates two nodes, with the names n0 and n1</span>
-<span class="c1"># and returns it to the python variables `n0` and `n1`</span>
-<span class="c1"># The API takes in the name of the node as a string</span>
-<span class="c1"># the same name is used to return results</span>
+<span class="c1"># and returns it to the variables `n0` and `n1`</span>
+<span class="c1"># The API takes in the name of the node as a string.</span>
+<span class="c1"># This name is used while displaying results.</span>
 <span class="n">n0</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="s1">&#39;n0&#39;</span><span class="p">)</span>
 <span class="n">n1</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="s1">&#39;n1&#39;</span><span class="p">)</span>
 
-<span class="c1"># Connects the two namespaces using a veth pair</span>
-<span class="c1"># and returns the interfaces as a touple to</span>
-<span class="c1"># `n0_n1` and `n1_n0`</span>
+<span class="c1"># Connects the above two nodes using a veth (virtual Ethernet)</span>
+<span class="c1"># pair and returns the interfaces at the end points of the link</span>
+<span class="c1"># as a tuple `n0_n1` and `n1_n0`. `n0_n1` interface</span>
+<span class="c1"># is at `n0` and `n1_n0` interface is at `n1`.</span>
+<span class="c1">#</span>
 <span class="c1"># The API takes two nodes as the parameters</span>
-<span class="c1"># and the order does not matter</span>
+<span class="c1"># and returns the pair of interfaces</span>
 <span class="p">(</span><span class="n">n0_n1</span><span class="p">,</span> <span class="n">n1_n0</span><span class="p">)</span> <span class="o">=</span> <span class="n">connect</span><span class="p">(</span><span class="n">n0</span><span class="p">,</span> <span class="n">n1</span><span class="p">)</span>
 
 <span class="c1"># Sets address to both the interfaces</span>
@@ -195,27 +197,32 @@
 <span class="n">n1_n0</span><span class="o">.</span><span class="n">set_address</span><span class="p">(</span><span class="s1">&#39;10.0.0.2/24&#39;</span><span class="p">)</span>
 
 <span class="c1"># Sets attributes such as bandwidth, latency and</span>
-<span class="c1"># queue descipline to the connectivity</span>
-<span class="c1"># Note that the latency and bandwidth need not be the same,</span>
-<span class="c1"># as in the real life scenario where upload bandwidth is</span>
-<span class="c1"># lesser than download</span>
+<span class="c1"># queue discipline for the link.</span>
+<span class="c1"># Attributes for the link from `n0` to `n1` are set at interface</span>
+<span class="c1"># `n0_n1` (and vice versa)</span>
+<span class="c1"># Note that the bandwidth (and latency) need not be the same in both</span>
+<span class="c1"># directions, as in the real life scenario where upload bandwidth is</span>
+<span class="c1"># typically lower than download bandwidth</span>
 <span class="n">n0_n1</span><span class="o">.</span><span class="n">set_attributes</span><span class="p">(</span><span class="s1">&#39;5mbit&#39;</span><span class="p">,</span> <span class="s1">&#39;5ms&#39;</span><span class="p">,</span> <span class="s1">&#39;pfifo&#39;</span><span class="p">)</span>
 <span class="n">n1_n0</span><span class="o">.</span><span class="n">set_attributes</span><span class="p">(</span><span class="s1">&#39;10mbit&#39;</span><span class="p">,</span> <span class="s1">&#39;100ms&#39;</span><span class="p">,</span> <span class="s1">&#39;pfifo&#39;</span><span class="p">)</span>
 
-<span class="c1"># Sets up a flow between the two nodes</span>
+<span class="c1"># Defines a flow between the two nodes `n0` and `n1`</span>
 <span class="c1"># The API takes in the source node, destination node,</span>
-<span class="c1"># destination address, start time, end time of the</span>
-<span class="c1"># experiment to be run and the number of flows</span>
+<span class="c1"># destination address, start time and end time of</span>
+<span class="c1"># the flow and the number of flows</span>
 <span class="n">flow</span> <span class="o">=</span> <span class="n">Flow</span><span class="p">(</span><span class="n">n0</span><span class="p">,</span> <span class="n">n1</span><span class="p">,</span> <span class="n">n1_n0</span><span class="o">.</span><span class="n">address</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 
-<span class="c1"># The name of the experiment of the is taken to</span>
-<span class="c1"># return the results according with the name</span>
-<span class="c1"># the flavour of tcp to be used is also given</span>
-<span class="n">exp</span> <span class="o">=</span> <span class="n">Experiment</span><span class="p">(</span><span class="s1">&#39;tcp_1up&#39;</span><span class="p">)</span>
+<span class="c1"># Define an experiment to be run on the above topology.</span>
+<span class="c1"># The API takes the experiment name as a string</span>
+<span class="n">exp</span> <span class="o">=</span> <span class="n">Experiment</span><span class="p">(</span><span class="s1">&#39;tcp_2up&#39;</span><span class="p">)</span>
+
+<span class="c1"># Add the above defined flow to the experiment.</span>
+<span class="c1"># The TCP flavor of the traffic generated can be</span>
+<span class="c1"># optionally given. Below we have chosen TCP Reno</span>
 <span class="n">exp</span><span class="o">.</span><span class="n">add_tcp_flow</span><span class="p">(</span><span class="n">flow</span><span class="p">,</span> <span class="s1">&#39;reno&#39;</span><span class="p">)</span>
 
-<span class="c1"># The experiment is run with the topology and</span>
-<span class="c1"># mentioned configurations</span>
+<span class="c1"># The experiment is run on the above topology with</span>
+<span class="c1"># the mentioned configurations.</span>
 <span class="n">exp</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
 </pre></div>
 </div>

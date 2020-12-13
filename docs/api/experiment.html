@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Experiment &mdash; NeST 0.1 documentation</title>
+  <title>Experiment &mdash; NeST 0.2 documentation</title>
   
 
   
@@ -211,7 +211,7 @@ TCP with cubic congestion algorithm</p>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>flow</strong> (<a class="reference internal" href="#nest.experiment.experiment.Flow" title="nest.experiment.experiment.Flow"><em>Flow</em></a>) – Flow to be added to experiment</p></li>
-<li><p><strong>target_bw</strong> – UPD bandwidth (in Mbits) (Default value = ‘1mbit’)</p></li>
+<li><p><strong>target_bw</strong> – UDP bandwidth (in Mbits) (Default value = ‘1mbit’)</p></li>
 </ul>
 </dd>
 </dl>
@@ -415,7 +415,7 @@ TCP with cubic congestion algorithm</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p><ul class="simple">
-<li><p><strong>dependency</strong> (<em>int</em>) – updated dependency incase netperf is not installed</p></li>
+<li><p><strong>dependency</strong> (<em>int</em>) – updated dependency in case netperf is not installed</p></li>
 <li><p><strong>netperf_runners</strong> (<em>List[NetperfRunner]</em>) – all the netperf flows generated</p></li>
 <li><p><strong>workers</strong> (<em>List[multiprocessing.Process]</em>) – Processes to run netperf flows</p></li>
 <li><p><strong>ss_schedules</strong> (<em>dict</em>) – updated ss_schedules</p></li>
@@ -440,7 +440,7 @@ TCP with cubic congestion algorithm</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p><ul class="simple">
-<li><p><strong>depedency</strong> (<em>int</em>) – updated dependency incase iproute2 is not installed</p></li>
+<li><p><strong>dependency</strong> (<em>int</em>) – updated dependency in case iproute2 is not installed</p></li>
 <li><p><strong>iperf3_runners</strong> (<em>List[NetperfRunner]</em>) – all the iperf3 udp flows generated</p></li>
 <li><p><strong>workers</strong> (<em>List[multiprocessing.Process]</em>) – Processes to run iperf3 udp flows</p></li>
 </ul>
