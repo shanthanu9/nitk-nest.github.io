@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Welcome to NeST’s documentation! &mdash; NeST 0.2 documentation</title>
+  <title>NeST: Network Stack Tester &mdash; NeST 0.2.1 documentation</title>
   
 
   
@@ -16,7 +16,10 @@
 
   
   
+
   
+  
+
   
 
   
@@ -29,14 +32,13 @@
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Tutorial" href="tutorial/tutorial.html" /> 
+    <link rel="next" title="Installation" href="user/install.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -50,7 +52,7 @@
           
 
           
-            <a href="#" class="icon icon-home" alt="Documentation Home"> NeST
+            <a href="#" class="icon icon-home"> NeST
           
 
           
@@ -81,9 +83,13 @@
               
             
             
-              <p class="caption"><span class="caption-text">Contents</span></p>
+              <p class="caption"><span class="caption-text">User Guide</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="tutorial/tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user/install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user/tutorial.html">Tutorial</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API Guide</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="api/api.html">Class Reference</a></li>
 </ul>
 
@@ -125,18 +131,20 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
     
       <li><a href="#" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Welcome to NeST’s documentation!</li>
+      <li>NeST: Network Stack Tester</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -150,26 +158,60 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="welcome-to-nest-s-documentation">
-<h1>Welcome to NeST’s documentation!<a class="headerlink" href="#welcome-to-nest-s-documentation" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="what-is-nest">
-<h2>What is NeST?<a class="headerlink" href="#what-is-nest" title="Permalink to this headline">¶</a></h2>
-<p><cite>NeST</cite> is a python3 package that handles testbed setup, testbed configuration,
-collecting and visualizing data by providing a user friendly API, addressing
-common issues involved in conducting networking experiments.</p>
+  <div class="section" id="nest-network-stack-tester">
+<h1>NeST: Network Stack Tester<a class="headerlink" href="#nest-network-stack-tester" title="Permalink to this headline">¶</a></h1>
+<p><strong>NeST</strong> is a python3 package aiding researchers and beginners alike in
+emulating real-world networks. Here is a small <em>peak</em> into the APIs NeST provides:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Create two nodes, emulating two network devices</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">node1</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="s1">&#39;node1&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">node2</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="s1">&#39;node2&#39;</span><span class="p">)</span>
+<span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Connect the above nodes, with eth1 and eth2 being</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># respective interfaces of node1 and node2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">eth1</span><span class="p">,</span> <span class="n">eth2</span> <span class="o">=</span> <span class="n">connect</span><span class="p">(</span><span class="n">node1</span><span class="p">,</span> <span class="n">node2</span><span class="p">)</span>
+<span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Assign addresses to the above two interfaces</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">eth1</span><span class="o">.</span><span class="n">set_address</span><span class="p">(</span><span class="s1">&#39;10.0.0.1/24&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">eth2</span><span class="o">.</span><span class="n">set_address</span><span class="p">(</span><span class="s1">&#39;10.0.0.2/24&#39;</span><span class="p">)</span>
+<span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Ping between the two nodes!</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">node1</span><span class="o">.</span><span class="n">ping</span><span class="p">(</span><span class="n">eth2</span><span class="o">.</span><span class="n">address</span><span class="p">)</span>  <span class="c1"># address of eth2 in node1</span>
+<span class="go">SUCCESS: ping from node1 to 10.0.0.2</span>
+</pre></div>
+</div>
+<p><strong>NeST</strong> provides a set of APIs for:</p>
+<ul class="simple">
+<li><p>Creation of network testbed</p></li>
+<li><p>Configuration of network testbed</p></li>
+<li><p>Setup network experiment on the testbed</p></li>
+<li><p>Collection and Visualization of the data from the network experiment</p></li>
+</ul>
+<p>NeST is officially supported for Python 3.6+.</p>
+<hr class="docutils" />
+<p>This below section contains step-by-step information to get started with
+using <strong>NeST</strong>.</p>
 <div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Contents</span></p>
+<p class="caption"><span class="caption-text">User Guide</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="tutorial/tutorial.html">Tutorial</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="tutorial/tutorial.html#peer-to-peer-topology">Peer to peer topology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user/install.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="user/install.html#installing-nest-python-package">1. Installing NeST python package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/install.html#install-dependencies">2. Install dependencies</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="user/tutorial.html">Tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="user/tutorial.html#peer-to-peer-topology-p2p">1. Peer-to-Peer topology (p2p)</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">API Guide</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="api/api.html">Class Reference</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="api/api.html#nest-apis">NeST APIs</a></li>
 </ul>
 </li>
 </ul>
-</div>
 </div>
 </div>
 
@@ -178,35 +220,28 @@ common issues involved in conducting networking experiments.</p>
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="tutorial/tutorial.html" class="btn btn-neutral float-right" title="Tutorial" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
+        <a href="user/install.html" class="btn btn-neutral float-right" title="Installation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2020, NITK
+        &#169; Copyright 2019-2021 NITK Surathkal.
 
     </p>
   </div>
     
     
     
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     
     provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Index &mdash; NeST 0.2 documentation</title>
+  <title>Index &mdash; NeST 0.2.1 documentation</title>
   
 
   
@@ -16,7 +16,10 @@
 
   
   
+
   
+  
+
   
 
   
@@ -29,7 +32,6 @@
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -49,7 +51,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home" alt="Documentation Home"> NeST
+            <a href="index.html" class="icon icon-home"> NeST
           
 
           
@@ -80,9 +82,13 @@
               
             
             
-              <p class="caption"><span class="caption-text">Contents</span></p>
+              <p class="caption"><span class="caption-text">User Guide</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="tutorial/tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user/install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user/tutorial.html">Tutorial</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API Guide</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="api/api.html">Class Reference</a></li>
 </ul>
 
@@ -124,6 +130,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -135,7 +143,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
         
       </li>
     
@@ -202,13 +210,19 @@
 </li>
       <li><a href="api/routing.html#nest.routing.rip.Rip.add_rip">add_rip() (nest.routing.rip.Rip method)</a>
 </li>
+      <li><a href="api/topology.html#nest.topology.node.Node.add_route">add_route() (nest.topology.node.Node method)</a>
+</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/topology.html#nest.topology.node.Node.add_route">add_route() (nest.topology.node.Node method)</a>
+      <li><a href="api/topology.html#nest.topology.node.Node.add_route_mpls_pop">add_route_mpls_pop() (nest.topology.node.Node method)</a>
+</li>
+      <li><a href="api/topology.html#nest.topology.node.Node.add_route_mpls_push">add_route_mpls_push() (nest.topology.node.Node method)</a>
+</li>
+      <li><a href="api/topology.html#nest.topology.node.Node.add_route_mpls_switch">add_route_mpls_switch() (nest.topology.node.Node method)</a>
 </li>
       <li><a href="api/experiment.html#nest.experiment.experiment.Experiment.add_tcp_flow">add_tcp_flow() (nest.experiment.experiment.Experiment method)</a>
 </li>
-      <li><a href="api/routing.html#nest.routing.quagga_base.QuaggaBase.add_to_config">add_to_config() (nest.routing.quagga_base.QuaggaBase method)</a>
+      <li><a href="api/routing.html#nest.routing.route_daemons.RoutingDaemonBase.add_to_config">add_to_config() (nest.routing.route_daemons.RoutingDaemonBase method)</a>
 </li>
       <li><a href="api/experiment.html#nest.experiment.experiment.Experiment.add_udp_flow">add_udp_flow() (nest.experiment.experiment.Experiment method)</a>
 </li>
@@ -230,18 +244,20 @@
 </li>
       <li><a href="api/experiment.html#nest.experiment.run_exp.cleanup">cleanup() (in module nest.experiment.run_exp)</a>
 </li>
+      <li><a href="api/routing.html#nest.routing.route_daemons.RoutingDaemonBase.conf">conf (nest.routing.route_daemons.RoutingDaemonBase attribute)</a>
+</li>
       <li><a href="api/routing.html#nest.routing.routing_helper.RoutingHelper.conf_dir">conf_dir (nest.routing.routing_helper.RoutingHelper attribute)</a>
 </li>
-      <li><a href="api/routing.html#nest.routing.quagga_base.QuaggaBase.conf_file">conf_file (nest.routing.quagga_base.QuaggaBase attribute)</a>
+      <li><a href="api/routing.html#nest.routing.route_daemons.RoutingDaemonBase.conf_file">conf_file (nest.routing.route_daemons.RoutingDaemonBase attribute)</a>
 </li>
       <li><a href="api/topology.html#nest.topology.node.Node.configure_tcp_param">configure_tcp_param() (nest.topology.node.Node method)</a>
 </li>
       <li><a href="api/topology.html#nest.topology.node.Node.configure_udp_param">configure_udp_param() (nest.topology.node.Node method)</a>
 </li>
-      <li><a href="api/topology.html#nest.topology.interface.connect">connect() (in module nest.topology.interface)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/topology.html#nest.topology.interface.connect">connect() (in module nest.topology.interface)</a>
+</li>
       <li><a href="api/topology.html#nest.topology.address.Subnet.counter">counter() (nest.topology.address.Subnet property)</a>
 </li>
       <li><a href="api/routing.html#nest.routing.isis.Isis.create_basic_config">create_basic_config() (nest.routing.isis.Isis method)</a>
@@ -249,14 +265,14 @@
       <ul>
         <li><a href="api/routing.html#nest.routing.ospf.Ospf.create_basic_config">(nest.routing.ospf.Ospf method)</a>
 </li>
-        <li><a href="api/routing.html#nest.routing.quagga_base.QuaggaBase.create_basic_config">(nest.routing.quagga_base.QuaggaBase method)</a>
-</li>
         <li><a href="api/routing.html#nest.routing.rip.Rip.create_basic_config">(nest.routing.rip.Rip method)</a>
+</li>
+        <li><a href="api/routing.html#nest.routing.route_daemons.RoutingDaemonBase.create_basic_config">(nest.routing.route_daemons.RoutingDaemonBase method)</a>
 </li>
         <li><a href="api/routing.html#nest.routing.zebra.Zebra.create_basic_config">(nest.routing.zebra.Zebra method)</a>
 </li>
       </ul></li>
-      <li><a href="api/routing.html#nest.routing.quagga_base.QuaggaBase.create_config">create_config() (nest.routing.quagga_base.QuaggaBase method)</a>
+      <li><a href="api/routing.html#nest.routing.route_daemons.RoutingDaemonBase.create_config">create_config() (nest.routing.route_daemons.RoutingDaemonBase method)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -264,14 +280,20 @@
 <h2 id="D">D</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/routing.html#nest.routing.quagga_base.QuaggaBase.daemon">daemon (nest.routing.quagga_base.QuaggaBase attribute)</a>
+      <li><a href="api/routing.html#nest.routing.route_daemons.RoutingDaemonBase.daemon">daemon (nest.routing.route_daemons.RoutingDaemonBase attribute)</a>
 </li>
       <li><a href="api/topology.html#nest.topology.interface.Interface.delete_qdisc">delete_qdisc() (nest.topology.interface.Interface method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/experiment.html#nest.experiment.experiment.Flow.destination_address">destination_address() (nest.experiment.experiment.Flow property)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/topology.html#nest.topology.interface.Interface.disable_ip_dad">disable_ip_dad() (nest.topology.interface.Interface method)</a>
+
+      <ul>
+        <li><a href="api/topology.html#nest.topology.node.Node.disable_ip_dad">(nest.topology.node.Node method)</a>
+</li>
+      </ul></li>
       <li><a href="api/experiment.html#nest.experiment.run_exp.dump_json_ouputs">dump_json_ouputs() (in module nest.experiment.run_exp)</a>
 </li>
   </ul></td>
@@ -284,6 +306,8 @@
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/topology.html#nest.topology.interface.Interface.enable_mpls">enable_mpls() (nest.topology.interface.Interface method)</a>
+</li>
       <li><a href="api/experiment.html#nest.experiment.experiment.Experiment">Experiment (class in nest.experiment.experiment)</a>
 </li>
   </ul></td>
@@ -310,6 +334,8 @@
 </li>
       <li><a href="api/experiment.html#nest.experiment.run_exp.get_dependency_status">get_dependency_status() (in module nest.experiment.run_exp)</a>
 </li>
+      <li><a href="api/topology.html#nest.topology.node.Node.get_interface">get_interface() (nest.topology.node.Node method)</a>
+</li>
       <li><a href="api/topology.html#nest.topology.address.Subnet.get_next_addr">get_next_addr() (nest.topology.address.Subnet method)</a>
 </li>
   </ul></td>
@@ -319,6 +345,8 @@
       <li><a href="api/experiment.html#nest.experiment.run_exp.get_plotter_workers">get_plotter_workers() (in module nest.experiment.run_exp)</a>
 </li>
       <li><a href="api/topology.html#nest.topology.interface.Interface.get_qdisc">get_qdisc() (nest.topology.interface.Interface method)</a>
+</li>
+      <li><a href="api/experiment.html#nest.experiment.run_exp.get_readme_content">get_readme_content() (in module nest.experiment.run_exp)</a>
 </li>
       <li><a href="api/topology.html#nest.topology.address.Address.get_subnet">get_subnet() (nest.topology.address.Address method)</a>
 </li>
@@ -350,13 +378,17 @@
 </li>
       <li><a href="api/config.html#nest.config.import_default_config">import_default_config() (in module nest.config)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/topology.html#nest.topology.interface.Interface">Interface (class in nest.topology.interface)</a>
 </li>
-      <li><a href="api/routing.html#nest.routing.quagga_base.QuaggaBase.interfaces">interfaces (nest.routing.quagga_base.QuaggaBase attribute)</a>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/routing.html#nest.routing.route_daemons.RoutingDaemonBase.interfaces">interfaces (nest.routing.route_daemons.RoutingDaemonBase attribute)</a>
 </li>
       <li><a href="api/topology.html#nest.topology.node.Node.interfaces">interfaces() (nest.topology.node.Node property)</a>
+</li>
+      <li><a href="api/topology.html#nest.topology.address.Address.is_ipv6">is_ipv6() (nest.topology.address.Address method)</a>
+</li>
+      <li><a href="api/topology.html#nest.topology.interface.Interface.is_mpls_enabled">is_mpls_enabled() (nest.topology.interface.Interface method)</a>
 </li>
       <li><a href="api/topology.html#nest.topology.address.Address.is_subnet">is_subnet() (nest.topology.address.Address method)</a>
 </li>
@@ -382,9 +414,9 @@
 </li>
         <li><a href="api/routing.html#module-nest.routing.ospf">nest.routing.ospf</a>
 </li>
-        <li><a href="api/routing.html#module-nest.routing.quagga_base">nest.routing.quagga_base</a>
-</li>
         <li><a href="api/routing.html#module-nest.routing.rip">nest.routing.rip</a>
+</li>
+        <li><a href="api/routing.html#module-nest.routing.route_daemons">nest.routing.route_daemons</a>
 </li>
         <li><a href="api/routing.html#module-nest.routing.routing_helper">nest.routing.routing_helper</a>
 </li>
@@ -399,6 +431,12 @@
         <li><a href="api/topology.html#module-nest.topology.traffic_control">nest.topology.traffic_control</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/topology.html#nest.topology.node.Node.mpls_max_label">mpls_max_label() (nest.topology.node.Node property)</a>
+</li>
+      <li><a href="api/topology.html#nest.topology.interface.Interface.mtu">mtu() (nest.topology.interface.Interface property)</a>
+</li>
   </ul></td>
 </tr></table>
 
@@ -453,17 +491,17 @@
 </li>
       </ul></li>
       <li>
-    nest.routing.quagga_base
-
-      <ul>
-        <li><a href="api/routing.html#module-nest.routing.quagga_base">module</a>
-</li>
-      </ul></li>
-      <li>
     nest.routing.rip
 
       <ul>
         <li><a href="api/routing.html#module-nest.routing.rip">module</a>
+</li>
+      </ul></li>
+      <li>
+    nest.routing.route_daemons
+
+      <ul>
+        <li><a href="api/routing.html#module-nest.routing.route_daemons">module</a>
 </li>
       </ul></li>
   </ul></td>
@@ -538,7 +576,7 @@
 </li>
       <li><a href="api/config.html#nest.config.path">path (in module nest.config)</a>
 </li>
-      <li><a href="api/routing.html#nest.routing.quagga_base.QuaggaBase.pid_file">pid_file (nest.routing.quagga_base.QuaggaBase attribute)</a>
+      <li><a href="api/routing.html#nest.routing.route_daemons.RoutingDaemonBase.pid_file">pid_file (nest.routing.route_daemons.RoutingDaemonBase attribute)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
@@ -559,10 +597,6 @@
       <li><a href="api/topology.html#nest.topology.traffic_control.Qdisc">Qdisc (class in nest.topology.traffic_control)</a>
 </li>
   </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/routing.html#nest.routing.quagga_base.QuaggaBase">QuaggaBase (class in nest.routing.quagga_base)</a>
-</li>
-  </ul></td>
 </tr></table>
 
 <h2 id="R">R</h2>
@@ -576,9 +610,11 @@
 </li>
       <li><a href="api/routing.html#nest.routing.rip.Rip">Rip (class in nest.routing.rip)</a>
 </li>
-      <li><a href="api/routing.html#nest.routing.quagga_base.QuaggaBase.router_ns_id">router_ns_id (nest.routing.quagga_base.QuaggaBase attribute)</a>
+      <li><a href="api/routing.html#nest.routing.route_daemons.RoutingDaemonBase.router_ns_id">router_ns_id (nest.routing.route_daemons.RoutingDaemonBase attribute)</a>
 </li>
       <li><a href="api/routing.html#nest.routing.routing_helper.RoutingHelper.routers">routers (nest.routing.routing_helper.RoutingHelper attribute)</a>
+</li>
+      <li><a href="api/routing.html#nest.routing.route_daemons.RoutingDaemonBase">RoutingDaemonBase (class in nest.routing.route_daemons)</a>
 </li>
       <li><a href="api/routing.html#nest.routing.routing_helper.RoutingHelper">RoutingHelper (class in nest.routing.routing_helper)</a>
 </li>
@@ -591,9 +627,9 @@
 </li>
         <li><a href="api/routing.html#nest.routing.ospf.Ospf.run">(nest.routing.ospf.Ospf method)</a>
 </li>
-        <li><a href="api/routing.html#nest.routing.quagga_base.QuaggaBase.run">(nest.routing.quagga_base.QuaggaBase method)</a>
-</li>
         <li><a href="api/routing.html#nest.routing.rip.Rip.run">(nest.routing.rip.Rip method)</a>
+</li>
+        <li><a href="api/routing.html#nest.routing.route_daemons.RoutingDaemonBase.run">(nest.routing.route_daemons.RoutingDaemonBase method)</a>
 </li>
         <li><a href="api/routing.html#nest.routing.zebra.Zebra.run">(nest.routing.zebra.Zebra method)</a>
 </li>
@@ -618,12 +654,16 @@
 </li>
       <li><a href="api/topology.html#nest.topology.interface.Interface.set_mode">set_mode() (nest.topology.interface.Interface method)</a>
 </li>
-      <li><a href="api/topology.html#nest.topology.interface.Interface.set_qdisc">set_qdisc() (nest.topology.interface.Interface method)</a>
+      <li><a href="api/topology.html#nest.topology.interface.Interface.set_packet_corruption">set_packet_corruption() (nest.topology.interface.Interface method)</a>
 </li>
-      <li><a href="api/config.html#nest.config.set_value">set_value() (in module nest.config)</a>
+      <li><a href="api/topology.html#nest.topology.interface.Interface.set_packet_loss">set_packet_loss() (nest.topology.interface.Interface method)</a>
+</li>
+      <li><a href="api/topology.html#nest.topology.interface.Interface.set_qdisc">set_qdisc() (nest.topology.interface.Interface method)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/config.html#nest.config.set_value">set_value() (in module nest.config)</a>
+</li>
       <li><a href="api/experiment.html#nest.experiment.run_exp.setup_ping_runners">setup_ping_runners() (in module nest.experiment.run_exp)</a>
 </li>
       <li><a href="api/experiment.html#nest.experiment.run_exp.setup_ss_runners">setup_ss_runners() (in module nest.experiment.run_exp)</a>
@@ -667,28 +707,25 @@
            
           </div>
           <footer>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2020, NITK
+        &#169; Copyright 2019-2021 NITK Surathkal.
 
     </p>
   </div>
     
     
     
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     
     provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

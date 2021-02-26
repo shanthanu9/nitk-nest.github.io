@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Topology &mdash; NeST 0.2 documentation</title>
+  <title>Topology &mdash; NeST 0.2.1 documentation</title>
   
 
   
@@ -16,7 +16,10 @@
 
   
   
+
   
+  
+
   
 
   
@@ -29,7 +32,6 @@
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -50,7 +52,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> NeST
+            <a href="../index.html" class="icon icon-home"> NeST
           
 
           
@@ -81,9 +83,13 @@
               
             
             
-              <p class="caption"><span class="caption-text">Contents</span></p>
+              <p class="caption"><span class="caption-text">User Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../user/install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user/tutorial.html">Tutorial</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API Guide</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../tutorial/tutorial.html">Tutorial</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="api.html">Class Reference</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="api.html#nest-apis">NeST APIs</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="config.html">Config</a></li>
@@ -140,6 +146,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -153,7 +161,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             <a href="../_sources/api/topology.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -174,13 +182,13 @@
 <p>Handles addresses of interfaces</p>
 <dl class="py class">
 <dt id="nest.topology.address.Address">
-<em class="property">class </em><code class="sig-prename descclassname">nest.topology.address.</code><code class="sig-name descname">Address</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">addr_str</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.address.Address" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">nest.topology.address.</span></code><code class="sig-name descname"><span class="pre">Address</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">addr_str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.address.Address" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Validate address.</p>
 <p>TODO: Untested for IPv6</p>
 <dl class="py method">
 <dt id="nest.topology.address.Address.get_addr">
-<code class="sig-name descname">get_addr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">with_subnet</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.address.Address.get_addr" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_addr</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">with_subnet</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.address.Address.get_addr" title="Permalink to this definition">¶</a></dt>
 <dd><p>Getter for ip_addr</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -197,13 +205,20 @@
 
 <dl class="py method">
 <dt id="nest.topology.address.Address.get_subnet">
-<code class="sig-name descname">get_subnet</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.address.Address.get_subnet" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_subnet</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.address.Address.get_subnet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the subnet of the given address</p>
 </dd></dl>
 
 <dl class="py method">
+<dt id="nest.topology.address.Address.is_ipv6">
+<code class="sig-name descname"><span class="pre">is_ipv6</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.address.Address.is_ipv6" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if the address is IPv6 or not</p>
+<p>Note: This takes care of ‘DEFAULT’ also</p>
+</dd></dl>
+
+<dl class="py method">
 <dt id="nest.topology.address.Address.is_subnet">
-<code class="sig-name descname">is_subnet</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.address.Address.is_subnet" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">is_subnet</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.address.Address.is_subnet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check if the address is a subnet or not</p>
 </dd></dl>
 
@@ -211,25 +226,25 @@
 
 <dl class="py class">
 <dt id="nest.topology.address.Subnet">
-<em class="property">class </em><code class="sig-prename descclassname">nest.topology.address.</code><code class="sig-name descname">Subnet</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">addr_str</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.address.Subnet" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">nest.topology.address.</span></code><code class="sig-name descname"><span class="pre">Subnet</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">addr_str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.address.Subnet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>For generating sequential addresses in a subnet</p>
 <p>NOTE: Supported only for IPv4 addresses</p>
 <dl class="py method">
 <dt id="nest.topology.address.Subnet.counter">
-<em class="property">property </em><code class="sig-name descname">counter</code><a class="headerlink" href="#nest.topology.address.Subnet.counter" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">counter</span></code><a class="headerlink" href="#nest.topology.address.Subnet.counter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Getter for counter</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="nest.topology.address.Subnet.get_next_addr">
-<code class="sig-name descname">get_next_addr</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.address.Subnet.get_next_addr" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_next_addr</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.address.Subnet.get_next_addr" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get next address in sequence in the subnet</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="nest.topology.address.Subnet.network_address">
-<em class="property">property </em><code class="sig-name descname">network_address</code><a class="headerlink" href="#nest.topology.address.Subnet.network_address" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">network_address</span></code><a class="headerlink" href="#nest.topology.address.Subnet.network_address" title="Permalink to this definition">¶</a></dt>
 <dd><p>Getter for network address</p>
 </dd></dl>
 
@@ -241,12 +256,12 @@
 <p>API related to interfaces in topology</p>
 <dl class="py class">
 <dt id="nest.topology.interface.Interface">
-<em class="property">class </em><code class="sig-prename descclassname">nest.topology.interface.</code><code class="sig-name descname">Interface</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">interface_name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.interface.Interface" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">nest.topology.interface.</span></code><code class="sig-name descname"><span class="pre">Interface</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">interface_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.interface.Interface" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Abstraction for an network interface.</p>
 <dl class="py attribute">
 <dt id="nest.topology.interface.Interface.name">
-<code class="sig-name descname">name</code><a class="headerlink" href="#nest.topology.interface.Interface.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">name</span></code><a class="headerlink" href="#nest.topology.interface.Interface.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>User given name for the interface</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -257,7 +272,7 @@
 
 <dl class="py attribute">
 <dt id="nest.topology.interface.Interface.id">
-<code class="sig-name descname">id</code><a class="headerlink" href="#nest.topology.interface.Interface.id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">id</span></code><a class="headerlink" href="#nest.topology.interface.Interface.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>This value is used by <cite>engine</cite> to create emulated interface
 entity</p>
 <dl class="field-list simple">
@@ -269,7 +284,7 @@ entity</p>
 
 <dl class="py attribute">
 <dt id="nest.topology.interface.Interface.node">
-<code class="sig-name descname">node</code><a class="headerlink" href="#nest.topology.interface.Interface.node" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">node</span></code><a class="headerlink" href="#nest.topology.interface.Interface.node" title="Permalink to this definition">¶</a></dt>
 <dd><p><cite>Node</cite> which contains this <cite>Interface</cite></p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -280,7 +295,7 @@ entity</p>
 
 <dl class="py attribute">
 <dt id="nest.topology.interface.Interface.address">
-<code class="sig-name descname">address</code><a class="headerlink" href="#nest.topology.interface.Interface.address" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">address</span></code><a class="headerlink" href="#nest.topology.interface.Interface.address" title="Permalink to this definition">¶</a></dt>
 <dd><p>IP address assigned to this interface</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -291,7 +306,7 @@ entity</p>
 
 <dl class="py method">
 <dt id="nest.topology.interface.Interface.add_class">
-<code class="sig-name descname">add_class</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">qdisc</span></em>, <em class="sig-param"><span class="n">parent</span><span class="o">=</span><span class="default_value">'root'</span></em>, <em class="sig-param"><span class="n">classid</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.interface.Interface.add_class" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">add_class</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qdisc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'root'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">classid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.interface.Interface.add_class" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create an object that represents a class</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -306,7 +321,7 @@ entity</p>
 
 <dl class="py method">
 <dt id="nest.topology.interface.Interface.add_filter">
-<code class="sig-name descname">add_filter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">priority</span></em>, <em class="sig-param"><span class="n">filtertype</span></em>, <em class="sig-param"><span class="n">flowid</span></em>, <em class="sig-param"><span class="n">protocol</span><span class="o">=</span><span class="default_value">'ip'</span></em>, <em class="sig-param"><span class="n">parent</span><span class="o">=</span><span class="default_value">'root'</span></em>, <em class="sig-param"><span class="n">handle</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.interface.Interface.add_filter" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">add_filter</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">priority</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filtertype</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flowid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">protocol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ip'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'root'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">handle</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.interface.Interface.add_filter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Design a Filter to assign to a Class or Qdisc</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -326,7 +341,7 @@ if the traffic passes the filter</p></li>
 
 <dl class="py method">
 <dt id="nest.topology.interface.Interface.add_qdisc">
-<code class="sig-name descname">add_qdisc</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">qdisc</span></em>, <em class="sig-param"><span class="n">parent</span><span class="o">=</span><span class="default_value">'root'</span></em>, <em class="sig-param"><span class="n">handle</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.interface.Interface.add_qdisc" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">add_qdisc</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qdisc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'root'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">handle</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.interface.Interface.add_qdisc" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add a qdisc (Queueing Discipline) to this interface</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -342,14 +357,14 @@ if the traffic passes the filter</p></li>
 
 <dl class="py method">
 <dt id="id0">
-<em class="property">property </em><code class="sig-name descname">address</code><a class="headerlink" href="#id0" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">address</span></code><a class="headerlink" href="#id0" title="Permalink to this definition">¶</a></dt>
 <dd><p>Getter for the address associated
 with the interface</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="nest.topology.interface.Interface.delete_qdisc">
-<code class="sig-name descname">delete_qdisc</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">handle</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.interface.Interface.delete_qdisc" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">delete_qdisc</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">handle</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.interface.Interface.delete_qdisc" title="Permalink to this definition">¶</a></dt>
 <dd><p>Delete qdisc (Queueing Discipline) from this interface</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -359,8 +374,22 @@ with the interface</p>
 </dd></dl>
 
 <dl class="py method">
+<dt id="nest.topology.interface.Interface.disable_ip_dad">
+<code class="sig-name descname"><span class="pre">disable_ip_dad</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.interface.Interface.disable_ip_dad" title="Permalink to this definition">¶</a></dt>
+<dd><p>Disables Duplicate addresses Detection (DAD) for an interface.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nest.topology.interface.Interface.enable_mpls">
+<code class="sig-name descname"><span class="pre">enable_mpls</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.interface.Interface.enable_mpls" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enables mpls input through the interface.
+Requires mpls kernel modules to be loaded.</p>
+<p>Run <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">modprobe</span> <span class="pre">mpls_iptunnel</span></code> to load mpls modules.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt id="nest.topology.interface.Interface.get_address">
-<code class="sig-name descname">get_address</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.interface.Interface.get_address" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_address</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.interface.Interface.get_address" title="Permalink to this definition">¶</a></dt>
 <dd><p>Getter for the address associated
 with the interface</p>
 <p><em>NOTE</em>: Maintained since mentioned in NeST paper.</p>
@@ -368,39 +397,51 @@ with the interface</p>
 
 <dl class="py method">
 <dt id="nest.topology.interface.Interface.get_qdisc">
-<code class="sig-name descname">get_qdisc</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.interface.Interface.get_qdisc" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_qdisc</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.interface.Interface.get_qdisc" title="Permalink to this definition">¶</a></dt>
 <dd><p>Note that this is the qdisc set inside
 the IFB.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="id1">
-<em class="property">property </em><code class="sig-name descname">id</code><a class="headerlink" href="#id1" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">id</span></code><a class="headerlink" href="#id1" title="Permalink to this definition">¶</a></dt>
 <dd><p>Getter for id</p>
 </dd></dl>
 
 <dl class="py method">
+<dt id="nest.topology.interface.Interface.is_mpls_enabled">
+<code class="sig-name descname"><span class="pre">is_mpls_enabled</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.interface.Interface.is_mpls_enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if the interface has mpls enabled</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nest.topology.interface.Interface.mtu">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">mtu</span></code><a class="headerlink" href="#nest.topology.interface.Interface.mtu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the maximum transmit unit value for the interface</p>
+</dd></dl>
+
+<dl class="py method">
 <dt id="id2">
-<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#id2" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">name</span></code><a class="headerlink" href="#id2" title="Permalink to this definition">¶</a></dt>
 <dd><p>Getter for name</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="id3">
-<em class="property">property </em><code class="sig-name descname">node</code><a class="headerlink" href="#id3" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">node</span></code><a class="headerlink" href="#id3" title="Permalink to this definition">¶</a></dt>
 <dd><p>Getter for the <cite>Node</cite> associated
 with the interface</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="nest.topology.interface.Interface.pair">
-<em class="property">property </em><code class="sig-name descname">pair</code><a class="headerlink" href="#nest.topology.interface.Interface.pair" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">pair</span></code><a class="headerlink" href="#nest.topology.interface.Interface.pair" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get other pair for this interface (assuming veth)</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="nest.topology.interface.Interface.set_address">
-<code class="sig-name descname">set_address</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">address</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.interface.Interface.set_address" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">set_address</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">address</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.interface.Interface.set_address" title="Permalink to this definition">¶</a></dt>
 <dd><p>Assigns IP address to an interface</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -414,7 +455,7 @@ with the interface</p>
 
 <dl class="py method">
 <dt id="nest.topology.interface.Interface.set_attributes">
-<code class="sig-name descname">set_attributes</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">bandwidth</span></em>, <em class="sig-param"><span class="n">delay</span></em>, <em class="sig-param"><span class="n">qdisc</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.interface.Interface.set_attributes" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">set_attributes</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bandwidth</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qdisc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.interface.Interface.set_attributes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add attributes bandwidth, delay and qdisc to interface</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -430,7 +471,7 @@ with the interface</p>
 
 <dl class="py method">
 <dt id="nest.topology.interface.Interface.set_bandwidth">
-<code class="sig-name descname">set_bandwidth</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">min_rate</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.interface.Interface.set_bandwidth" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">set_bandwidth</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">min_rate</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.interface.Interface.set_bandwidth" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets a minimum bandwidth for the interface
 It is done by adding a HTB qdisc and a rate parameter to the class</p>
 <dl class="field-list simple">
@@ -442,7 +483,7 @@ It is done by adding a HTB qdisc and a rate parameter to the class</p>
 
 <dl class="py method">
 <dt id="nest.topology.interface.Interface.set_delay">
-<code class="sig-name descname">set_delay</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">delay</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.interface.Interface.set_delay" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">set_delay</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">delay</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.interface.Interface.set_delay" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds a delay to the link between two namespaces
 It is done by adding a delay in the interface</p>
 <dl class="field-list simple">
@@ -454,7 +495,7 @@ It is done by adding a delay in the interface</p>
 
 <dl class="py method">
 <dt id="nest.topology.interface.Interface.set_mode">
-<code class="sig-name descname">set_mode</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mode</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.interface.Interface.set_mode" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">set_mode</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.interface.Interface.set_mode" title="Permalink to this definition">¶</a></dt>
 <dd><p>Changes the mode of the interface</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -464,8 +505,42 @@ It is done by adding a delay in the interface</p>
 </dd></dl>
 
 <dl class="py method">
+<dt id="nest.topology.interface.Interface.set_packet_corruption">
+<code class="sig-name descname"><span class="pre">set_packet_corruption</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">corrupt_rate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">correlation_rate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.interface.Interface.set_packet_corruption" title="Permalink to this definition">¶</a></dt>
+<dd><p>allows the emulation of random noise introducing an error in a
+random position for a chosen percent of packets.
+It is also possible to add a correlation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>corrupt_rate</strong> (<em>str</em>) – </p></li>
+<li><p><strong>of the packets to be corrupted</strong> (<em>rate</em>) – </p></li>
+<li><p><strong>correlation_rate</strong> (<em>str</em>) – </p></li>
+<li><p><strong>between the corrupted packets</strong> (<em>correlation</em>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nest.topology.interface.Interface.set_packet_loss">
+<code class="sig-name descname"><span class="pre">set_packet_loss</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">loss_rate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">correlation_rate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.interface.Interface.set_packet_loss" title="Permalink to this definition">¶</a></dt>
+<dd><p>adds an independent loss probability to the packets outgoing from
+the chosen network interface.
+It is also possible to add a correlation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>loss_rate</strong> (<em>str</em>) – rate of the packets to be lost</p></li>
+<li><p><strong>correlation_rate</strong> (<em>str</em>) – correlation between the lost packets</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt id="nest.topology.interface.Interface.set_qdisc">
-<code class="sig-name descname">set_qdisc</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">qdisc</span></em>, <em class="sig-param"><span class="n">bandwidth</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.interface.Interface.set_qdisc" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">set_qdisc</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qdisc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bandwidth</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.interface.Interface.set_qdisc" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds the Queueing algorithm to the interface</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -479,7 +554,7 @@ It is done by adding a delay in the interface</p>
 
 <dl class="py method">
 <dt id="nest.topology.interface.Interface.subnet">
-<em class="property">property </em><code class="sig-name descname">subnet</code><a class="headerlink" href="#nest.topology.interface.Interface.subnet" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">subnet</span></code><a class="headerlink" href="#nest.topology.interface.Interface.subnet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Getter for the subnet to which the address belongs to</p>
 </dd></dl>
 
@@ -487,15 +562,36 @@ It is done by adding a delay in the interface</p>
 
 <dl class="py class">
 <dt id="nest.topology.interface.Veth">
-<em class="property">class </em><code class="sig-prename descclassname">nest.topology.interface.</code><code class="sig-name descname">Veth</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">interface1_name</span></em>, <em class="sig-param"><span class="n">interface2_name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.interface.Veth" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">nest.topology.interface.</span></code><code class="sig-name descname"><span class="pre">Veth</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">interface1_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interface2_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.interface.Veth" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Handle creation of Veth pairs</p>
 </dd></dl>
 
 <dl class="py function">
 <dt id="nest.topology.interface.connect">
-<code class="sig-prename descclassname">nest.topology.interface.</code><code class="sig-name descname">connect</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ns1</span></em>, <em class="sig-param"><span class="n">ns2</span></em>, <em class="sig-param"><span class="n">interface1_name</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">interface2_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.interface.connect" title="Permalink to this definition">¶</a></dt>
-<dd><p>Connects two nodes <cite>ns1</cite> and <cite>ns2</cite></p>
+<code class="sig-prename descclassname"><span class="pre">nest.topology.interface.</span></code><code class="sig-name descname"><span class="pre">connect</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interface1_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interface2_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.interface.connect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Connects two nodes <cite>node1</cite> and <cite>node2</cite>.
+Creates two paired Virtual Ethernet interfaces (veth) and returns
+them as a 2-element tuple.
+The first interface belongs to <cite>node1</cite>, and the second interface
+belongs to <cite>node2</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>node1</strong> (<a class="reference internal" href="#nest.topology.node.Node" title="nest.topology.node.Node"><em>Node</em></a>) – First veth interface added in this node</p></li>
+<li><p><strong>node2</strong> (<a class="reference internal" href="#nest.topology.node.Node" title="nest.topology.node.Node"><em>Node</em></a>) – Second veth interface added in this node</p></li>
+<li><p><strong>interface1_name</strong> (<em>str</em>) – Name of first veth interface</p></li>
+<li><p><strong>interface2_name</strong> (<em>str</em>) – Name of second veth interface</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>2 tuple of created (paired) veth interfaces. <cite>interface1</cite> is in
+<cite>n1</cite> and <cite>interface2</cite> is in <cite>n2</cite>.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(interface1, interface2)</p>
+</dd>
+</dl>
 </dd></dl>
 
 </div>
@@ -504,12 +600,12 @@ It is done by adding a delay in the interface</p>
 <p>API related to node creation in topology</p>
 <dl class="py class">
 <dt id="nest.topology.node.Node">
-<em class="property">class </em><code class="sig-prename descclassname">nest.topology.node.</code><code class="sig-name descname">Node</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.node.Node" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">nest.topology.node.</span></code><code class="sig-name descname"><span class="pre">Node</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.node.Node" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Abstraction for a network namespace.</p>
 <dl class="py attribute">
 <dt id="nest.topology.node.Node.name">
-<code class="sig-name descname">name</code><a class="headerlink" href="#nest.topology.node.Node.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">name</span></code><a class="headerlink" href="#nest.topology.node.Node.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>User given name for the node.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -520,7 +616,7 @@ It is done by adding a delay in the interface</p>
 
 <dl class="py method">
 <dt id="nest.topology.node.Node.add_route">
-<code class="sig-name descname">add_route</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dest_addr</span></em>, <em class="sig-param"><span class="n">via_interface</span></em>, <em class="sig-param"><span class="n">next_hop_addr</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.node.Node.add_route" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">add_route</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dest_addr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">via_interface</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">next_hop_addr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.node.Node.add_route" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add a route to the routing table of <cite>Node</cite>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -535,34 +631,74 @@ for all addresses</p></li>
 </dd></dl>
 
 <dl class="py method">
+<dt id="nest.topology.node.Node.add_route_mpls_pop">
+<code class="sig-name descname"><span class="pre">add_route_mpls_pop</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">incoming_label</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">next_hop_addr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.node.Node.add_route_mpls_pop" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>incoming_label</strong> (<em>THe label that the packet carries when entering the interface</em>) – </p></li>
+<li><p><strong>next_hop_addr</strong> (<em>IP address of the next hop</em>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nest.topology.node.Node.add_route_mpls_push">
+<code class="sig-name descname"><span class="pre">add_route_mpls_push</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dest_addr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">next_hop_addr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.node.Node.add_route_mpls_push" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a route to the routing table of <cite>Node</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dest_addr</strong> (<em>Address/str</em>) – Destination ip address of node to route to. ‘DEFAULT’ is
+for all addresses</p></li>
+<li><p><strong>next_hop_addr</strong> (<em>Address/str</em><em>, </em><em>optional</em>) – IP address of next hop Node (or router), by default ‘’</p></li>
+<li><p><strong>label</strong> (<em>the MPLS label pushed onto the packet</em>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nest.topology.node.Node.add_route_mpls_switch">
+<code class="sig-name descname"><span class="pre">add_route_mpls_switch</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">incoming_label</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">next_hop_addr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outgoing_label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.node.Node.add_route_mpls_switch" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>incoming_label</strong> (<em>The label that the packet carries when entering the interface</em>) – </p></li>
+<li><p><strong>next_hop_addr</strong> (<em>IP address of the next hop</em>) – </p></li>
+<li><p><strong>outgoing_label</strong> (<em>The label that is pushed onto the packet</em>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt id="nest.topology.node.Node.configure_tcp_param">
-<code class="sig-name descname">configure_tcp_param</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">param</span></em>, <em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.node.Node.configure_tcp_param" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">configure_tcp_param</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">param</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.node.Node.configure_tcp_param" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configure TCP parameters of <cite>Node</cite> available at
 /proc/sys/net/ipv4/tcp_*.</p>
 <p>Example: ‘window_scaling’, ‘wmem’, ‘ecn’, etc.</p>
+<p>If TCP Parameter <cite>param</cite> is valid, then new <cite>value</cite> is set
+for this <cite>param</cite>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>param</strong> (<em>str</em>) – TCP parameter to be configured</p></li>
 <li><p><strong>value</strong> (<em>str</em>) – New value of TCP parameter <cite>param</cite></p></li>
 </ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>If TCP Parameter <cite>param</cite> is valid, then new <cite>value</cite> is set
-for this <cite>param</cite>.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>str</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
 <dt id="nest.topology.node.Node.configure_udp_param">
-<code class="sig-name descname">configure_udp_param</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">param</span></em>, <em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.node.Node.configure_udp_param" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">configure_udp_param</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">param</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.node.Node.configure_udp_param" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configure UDP parameters of <cite>Node</cite> available at
 /proc/sys/net/ipv4/udp_*.</p>
 <p>Example: ‘early_demux’, ‘l3mdev_accept’, ‘rmem_min’, ‘wmem_min’</p>
+<p>If UDP Parameter <cite>param</cite> is valid, then new <cite>value</cite> is set
+for this <cite>param</cite>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -570,26 +706,52 @@ for this <cite>param</cite>.</p>
 <li><p><strong>value</strong> (<em>str</em>) – New value of TCP parameter <cite>param</cite></p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>If TCP Parameter <cite>param</cite> is valid, then new <cite>value</cite> is set
-for this <cite>param</cite>.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>str</p>
-</dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
+<dt id="nest.topology.node.Node.disable_ip_dad">
+<code class="sig-name descname"><span class="pre">disable_ip_dad</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.node.Node.disable_ip_dad" title="Permalink to this definition">¶</a></dt>
+<dd><p>Disables Duplicate addresses Detection (DAD) for all interfaces of <cite>Node</cite>.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt id="nest.topology.node.Node.enable_ip_forwarding">
-<code class="sig-name descname">enable_ip_forwarding</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.node.Node.enable_ip_forwarding" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">enable_ip_forwarding</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ipv6</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.node.Node.enable_ip_forwarding" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable IP forwarding in <cite>Node</cite>.</p>
 <p>After this method runs, the <cite>Node</cite> can be used as a router.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt id="nest.topology.node.Node.get_interface">
+<code class="sig-name descname"><span class="pre">get_interface</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">connection_number</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.node.Node.get_interface" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the interface in <cite>self</cite> connected to <cite>node</cite>.
+By default, this returns a veth interface.</p>
+<p><cite>connection_number</cite> is an optional argument used when there
+multiple connections between <cite>self</cite> and <cite>node</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>node</strong> (<a class="reference internal" href="#nest.topology.node.Node" title="nest.topology.node.Node"><em>Node</em></a>) – The other end point of the <cite>veth</cite> interface</p></li>
+<li><p><strong>connection_number</strong> (<em>int</em>) – If there are multiple connections, then this argument
+uniquely identifies the connection</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Return the interface between <cite>self</cite> and <cite>node</cite>. Use
+<cite>connection_number</cite> to uniquly identify an interface if
+there are multiple connections.
+If no interface is found, then return None.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#nest.topology.interface.Interface" title="nest.topology.interface.Interface">Interface</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt id="nest.topology.node.Node.id">
-<em class="property">property </em><code class="sig-name descname">id</code><a class="headerlink" href="#nest.topology.node.Node.id" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">id</span></code><a class="headerlink" href="#nest.topology.node.Node.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Value used by <cite>engine</cite> to create the emulated <cite>Node</cite> entity</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -600,7 +762,7 @@ for this <cite>param</cite>.</p>
 
 <dl class="py method">
 <dt id="nest.topology.node.Node.interfaces">
-<em class="property">property </em><code class="sig-name descname">interfaces</code><a class="headerlink" href="#nest.topology.node.Node.interfaces" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">interfaces</span></code><a class="headerlink" href="#nest.topology.node.Node.interfaces" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of interfaces in this node</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -610,8 +772,14 @@ for this <cite>param</cite>.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt id="nest.topology.node.Node.mpls_max_label">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">mpls_max_label</span></code><a class="headerlink" href="#nest.topology.node.Node.mpls_max_label" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the maximum mpls label set in the kernel for the current namespace</p>
+</dd></dl>
+
+<dl class="py method">
 <dt id="id4">
-<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#id4" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">name</span></code><a class="headerlink" href="#id4" title="Permalink to this definition">¶</a></dt>
 <dd><p>User given name for <cite>Node</cite></p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -622,13 +790,14 @@ for this <cite>param</cite>.</p>
 
 <dl class="py method">
 <dt id="nest.topology.node.Node.ping">
-<code class="sig-name descname">ping</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">destination_address</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.node.Node.ping" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">ping</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">destination_address</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">packets</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.node.Node.ping" title="Permalink to this definition">¶</a></dt>
 <dd><p>Ping from current <cite>Node</cite> to destination address
 if there is a route.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>destination_address</strong> (<em>Address/str</em>) – IP address to ping to</p></li>
+<li><p><strong>packets</strong> (<em>int</em>) – Number of ping packets sent (default: 1)</p></li>
 <li><p><strong>verbose</strong> (<em>bool</em>) – If <cite>True</cite>, print extensive ping success/failure details</p></li>
 </ul>
 </dd>
@@ -644,7 +813,7 @@ Else <cite>False</cite>.</p>
 
 <dl class="py method">
 <dt id="nest.topology.node.Node.read_tcp_param">
-<code class="sig-name descname">read_tcp_param</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">param</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.node.Node.read_tcp_param" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">read_tcp_param</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">param</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.node.Node.read_tcp_param" title="Permalink to this definition">¶</a></dt>
 <dd><p>Read TCP parameters of <cite>Node</cite> available at
 <cite>/proc/sys/net/ipv4/tcp_*</cite>.</p>
 <p>Example: ‘window_scaling’, ‘wmem’, ‘ecn’, etc.</p>
@@ -653,20 +822,18 @@ Else <cite>False</cite>.</p>
 <dd class="field-odd"><p><strong>param</strong> (<em>str</em>) – TCP parameter to be read</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><ul class="simple">
-<li><p><em>str</em> – If TCP Parameter <cite>param</cite> is valid, then corresponding value
-is returned.</p></li>
-<li><p><em>read tcp_parameters available at /proc/sys/net/ipv4/tcp_*</em></p></li>
-<li><p><strong>Example</strong> (<em>window_scaling, wmem, ecn, etc.</em>)</p></li>
-</ul>
-</p>
+<dd class="field-even"><p>If TCP Parameter <cite>param</cite> is valid, then corresponding value
+is returned.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
 <dt id="nest.topology.node.Node.read_udp_param">
-<code class="sig-name descname">read_udp_param</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">param</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.node.Node.read_udp_param" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">read_udp_param</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">param</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.node.Node.read_udp_param" title="Permalink to this definition">¶</a></dt>
 <dd><p>Read UDP parameters of <cite>Node`available at
 `/proc/sys/net/ipv4/udp_*</cite>.</p>
 <p>Example: ‘early_demux’, ‘l3mdev_accept’, ‘rmem_min’, ‘wmem_min’</p>
@@ -692,21 +859,21 @@ is returned.</p>
 <p>Handle traffic control entities</p>
 <dl class="py class">
 <dt id="nest.topology.traffic_control.Class">
-<em class="property">class </em><code class="sig-prename descclassname">nest.topology.traffic_control.</code><code class="sig-name descname">Class</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">namespace_id</span></em>, <em class="sig-param"><span class="n">dev_id</span></em>, <em class="sig-param"><span class="n">qdisc</span></em>, <em class="sig-param"><span class="n">parent</span><span class="o">=</span><span class="default_value">'root'</span></em>, <em class="sig-param"><span class="n">classid</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.traffic_control.Class" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">nest.topology.traffic_control.</span></code><code class="sig-name descname"><span class="pre">Class</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">namespace_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dev_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qdisc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'root'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">classid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.traffic_control.Class" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Handle classes associated to qdisc</p>
 </dd></dl>
 
 <dl class="py class">
 <dt id="nest.topology.traffic_control.Filter">
-<em class="property">class </em><code class="sig-prename descclassname">nest.topology.traffic_control.</code><code class="sig-name descname">Filter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">namespace_id</span></em>, <em class="sig-param"><span class="n">dev_id</span></em>, <em class="sig-param"><span class="n">protocol</span></em>, <em class="sig-param"><span class="n">priority</span></em>, <em class="sig-param"><span class="n">filtertype</span></em>, <em class="sig-param"><span class="n">flowid</span></em>, <em class="sig-param"><span class="n">parent</span><span class="o">=</span><span class="default_value">'root'</span></em>, <em class="sig-param"><span class="n">handle</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.traffic_control.Filter" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">nest.topology.traffic_control.</span></code><code class="sig-name descname"><span class="pre">Filter</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">namespace_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dev_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">protocol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">priority</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filtertype</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flowid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'root'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">handle</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.traffic_control.Filter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Handle filters to assign to class/qdisc</p>
 </dd></dl>
 
 <dl class="py class">
 <dt id="nest.topology.traffic_control.Qdisc">
-<em class="property">class </em><code class="sig-prename descclassname">nest.topology.traffic_control.</code><code class="sig-name descname">Qdisc</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">namespace_id</span></em>, <em class="sig-param"><span class="n">dev_id</span></em>, <em class="sig-param"><span class="n">qdisc</span></em>, <em class="sig-param"><span class="n">parent</span><span class="o">=</span><span class="default_value">'root'</span></em>, <em class="sig-param"><span class="n">handle</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.traffic_control.Qdisc" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">nest.topology.traffic_control.</span></code><code class="sig-name descname"><span class="pre">Qdisc</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">namespace_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dev_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qdisc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'root'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">handle</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nest.topology.traffic_control.Qdisc" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Handle Queueing Discipline</p>
 </dd></dl>
@@ -719,35 +886,28 @@ is returned.</p>
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-      
-        <a href="routing.html" class="btn btn-neutral float-left" title="Routing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="routing.html" class="btn btn-neutral float-left" title="Routing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2020, NITK
+        &#169; Copyright 2019-2021 NITK Surathkal.
 
     </p>
   </div>
     
     
     
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     
     provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 
