@@ -1,0 +1,377 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Installation &mdash; NeST 0.2.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Tutorial" href="tutorial.html" />
+    <link rel="prev" title="NeST: Network Stack Tester" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> NeST
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Guide</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#installing-nest-python-package">1. Installing NeST python package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#i-from-pypi">i) From PyPi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ii-from-source">ii) From source</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#install-dependencies">2. Install dependencies</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/api.html">Class Reference</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">NeST</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Installation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/user/install.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<p>Installing <strong>NeST</strong> is a two-step process. The first step is to install NeST
+python package itself using pip, and the next step is to install the necessary
+external dependencies of NeST.</p>
+<p>Note that NeST is supported only for <strong>Linux</strong> systems currently.</p>
+<div class="section" id="installing-nest-python-package">
+<h2>1. Installing NeST python package<a class="headerlink" href="#installing-nest-python-package" title="Permalink to this headline">¶</a></h2>
+<p>First, ensure that you have python version 3.6 or above in your system:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python3 -V
+</pre></div>
+</div>
+<p>Next, ensure that you have pip installed (to install python3 packages).
+It can be installed from your Linux Package Manager. For example,
+this is the command to install pip in Ubuntu:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>sudo apt install python3-pip
+</pre></div>
+</div>
+<p>After installing pip, make sure you also upgrade it:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python3 -m pip install -U pip
+</pre></div>
+</div>
+<p>Below are the two approaches to install NeST python package:</p>
+<div class="section" id="i-from-pypi">
+<h3>i) From PyPi<a class="headerlink" href="#i-from-pypi" title="Permalink to this headline">¶</a></h3>
+<p>This is the recommended way to install for most users of NeST.
+The below command will install NeST from
+<a class="reference external" href="https://pypi.org/project/nitk-nest/">https://pypi.org/project/nitk-nest/</a> (Python Package Index):</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python3 -m pip install nitk-nest
+</pre></div>
+</div>
+</div>
+<div class="section" id="ii-from-source">
+<h3>ii) From source<a class="headerlink" href="#ii-from-source" title="Permalink to this headline">¶</a></h3>
+<p>Follow this approach if you want to contribute to NeST development or want the
+latest source code with unreleased features.</p>
+<ol class="arabic">
+<li><p>Clone the official git repository:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git clone https://gitlab.com/nitk-nest/nest.git
+</pre></div>
+</div>
+</li>
+<li><p>Install via pip</p>
+<p>If you are developing or contributing to NeST development, then it is better
+to install NeST in editable mode.  In editable mode, your code changes are
+instantly propagated to the library code without reinstalling:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python3 -m pip install -e .
+</pre></div>
+</div>
+<p>If you are not developing, then run the below command:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python3 -m pip install .
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="section" id="install-dependencies">
+<h2>2. Install dependencies<a class="headerlink" href="#install-dependencies" title="Permalink to this headline">¶</a></h2>
+<p>NeST is an orchestration tool that relies on various network tools for its APIs.
+Below are the list of dependencies NeST requires. You do not need to install all
+of them. The dependencies you install will depend on your use case and how you
+would like to use NeST.</p>
+<p><strong>Core dependencies</strong> will be marked as bold and <em>Optional dependencies</em>
+will be maked in italics.</p>
+<ol class="arabic simple">
+<li><p>Ensure <strong>iproute2</strong> suite is installed with your kernel</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>ip -V
+<span class="go">ip utility, iproute2-ss200127</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Ensure <strong>ping</strong> is installed</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>ping -V
+<span class="go">ping from iputils s20190709</span>
+</pre></div>
+</div>
+<ol class="arabic" start="3">
+<li><p>Install <strong>netperf</strong></p>
+<p>You can check if netperf is installed by running the command:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>netperf -V
+<span class="go">Netperf version 2.7.0</span>
+</pre></div>
+</div>
+<p>If netperf is not installed, then it can be obtained from your
+Linux distribution packages.
+For Ubuntu run:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>sudo apt install netperf
+</pre></div>
+</div>
+<p>Minimum version of netperf supported is 2.6.0</p>
+</li>
+<li><p>Install <em>iperf3</em></p>
+<p>This is an optional dependency. You can install it if you want
+NeST to internally use iperf3 to generate flows.</p>
+<p>You can check if iperf3 is installed by running the command:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>iperf3 -v
+<span class="go">iperf 3.7 (cJSON 1.5.2)</span>
+<span class="go">Linux your-system 5.4.0-51-generic #56-Ubuntu SMP Mon Oct 5 14:28:49 UTC  2020 x86_64</span>
+</pre></div>
+</div>
+<p>If iperf3 is not installed, then it can be obtained from your Linux
+distribution packages. For Ubuntu run:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>sudo apt install iperf3
+</pre></div>
+</div>
+</li>
+<li><p>Install and setup a <em>dynamic routing suite</em> (optional)</p>
+<p>This is an optional dependency. You can install either <em>Frrouting</em>
+<strong>or</strong> <em>Quagga</em> if you want to use dynamic routing APIs in NeST.</p>
+<ol class="loweralpha">
+<li><p><em>Frrouting</em></p>
+<p>To install Frrouting on Ubuntu run:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>sudo apt install frr
+</pre></div>
+</div>
+<p>or follow the steps here: <a class="reference external" href="https://deb.frrouting.org">https://deb.frrouting.org</a></p>
+</li>
+<li><p>Quagga</p>
+<p>Quagga can be obtained from your Linux distribution packages.
+For Ubuntu run:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>sudo apt install quagga quagga-doc
+</pre></div>
+</div>
+<p>Edit <cite>/etc/quagga/daemons</cite> with an editor using sudo and turn on zebra,
+ripd and ospf by changing the following lines:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">zebra</span><span class="o">=</span>no -&gt; <span class="nv">zebra</span><span class="o">=</span>yes
+<span class="nv">ripd</span><span class="o">=</span>no -&gt; <span class="nv">ripd</span><span class="o">=</span>yes
+<span class="nv">ospfd</span><span class="o">=</span>no -&gt; <span class="nv">ospfd</span><span class="o">=</span>yes
+<span class="nv">isisd</span><span class="o">=</span>no -&gt; <span class="nv">isisd</span><span class="o">=</span>yes
+</pre></div>
+</div>
+<p>If the <cite>daemons</cite> file doesn’t exist create one and add the following
+lines to the file:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">zebra</span><span class="o">=</span>yes
+<span class="nv">bgpd</span><span class="o">=</span>no
+<span class="nv">ospfd</span><span class="o">=</span>yes
+<span class="nv">ospf6d</span><span class="o">=</span>no
+<span class="nv">ripd</span><span class="o">=</span>yes
+<span class="nv">ripngd</span><span class="o">=</span>no
+<span class="nv">isisd</span><span class="o">=</span>yes
+<span class="nv">babeld</span><span class="o">=</span>no
+</pre></div>
+</div>
+<p><strong>Note</strong>: Ensure that a quagga owned directory named ‘quagga’ exists
+under /run. If it doesn’t exist run:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>sudo mkdir /run/quagga
+<span class="gp">$ </span>sudo chown quagga /run/quagga
+</pre></div>
+</div>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="tutorial.html" class="btn btn-neutral float-right" title="Tutorial" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../index.html" class="btn btn-neutral float-left" title="NeST: Network Stack Tester" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019-2021 NITK Surathkal.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
